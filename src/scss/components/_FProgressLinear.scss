@@ -1,0 +1,137 @@
+.f-progress-linear {
+    display: block;
+    width: 100%;
+    margin: 14px 0;
+    position: relative;
+    .f-progress-linear--track {
+        background-color: rgba(#000000, 0.4);
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        transition: 0.3s ease-in;
+        
+        span {
+            display: inline-block;
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background-color: #0078D7;
+            border-radius: 100%;
+        }
+        span {
+            -webkit-animation: move 2.5s infinite cubic-bezier(0.2, 0.64, 0.81, 0.23);
+            -moz-animation: move 2.5s infinite cubic-bezier(0.2, 0.64, 0.81, 0.23);
+            -ms-animation: move 2.5s infinite cubic-bezier(0.2, 0.64, 0.81, 0.23);
+            -o-animation: move 2.5s infinite cubic-bezier(0.2, 0.64, 0.81, 0.23);
+            animation: move 2.5s infinite cubic-bezier(0.2, 0.64, 0.81, 0.23);
+        }
+        span:nth-child(2) {
+            -webkit-animation: move 2.5s 100ms infinite cubic-bezier(0.2, 0.64, 0.81, 0.23);
+            -moz-animation: move 2.5s 100ms infinite cubic-bezier(0.2, 0.64, 0.81, 0.23);
+            -ms-animation: move 2.5s 100ms infinite cubic-bezier(0.2, 0.64, 0.81, 0.23);
+            -o-animation: move 2.5s 100ms infinite cubic-bezier(0.2, 0.64, 0.81, 0.23);
+            animation: move 2.5s 100ms infinite cubic-bezier(0.2, 0.64, 0.81, 0.23);
+        }
+        span:nth-child(3) {
+            -webkit-animation: move 2.5s 200ms infinite cubic-bezier(0.2, 0.64, 0.81, 0.23);
+            -moz-animation: move 2.5s 200ms infinite cubic-bezier(0.2, 0.64, 0.81, 0.23);
+            -ms-animation: move 2.5s 200ms infinite cubic-bezier(0.2, 0.64, 0.81, 0.23);
+            -o-animation: move 2.5s 200ms infinite cubic-bezier(0.2, 0.64, 0.81, 0.23);
+            animation: move 2.5s 200ms infinite cubic-bezier(0.2, 0.64, 0.81, 0.23);
+        }
+        span:nth-child(4) {
+            -webkit-animation: move 2.5s 300ms infinite cubic-bezier(0.2, 0.64, 0.81, 0.23);
+            -moz-animation: move 2.5s 300ms infinite cubic-bezier(0.2, 0.64, 0.81, 0.23);
+            -ms-animation: move 2.5s 300ms infinite cubic-bezier(0.2, 0.64, 0.81, 0.23);
+            -o-animation: move 2.5s 300ms infinite cubic-bezier(0.2, 0.64, 0.81, 0.23);
+            animation: move 2.5s 300ms infinite cubic-bezier(0.2, 0.64, 0.81, 0.23);
+        }
+        span:nth-child(5) {
+            -webkit-animation: move 2.5s 400ms infinite cubic-bezier(0.2, 0.64, 0.81, 0.23);
+            -moz-animation: move 2.5s 400ms infinite cubic-bezier(0.2, 0.64, 0.81, 0.23);
+            -ms-animation: move 2.5s 400ms infinite cubic-bezier(0.2, 0.64, 0.81, 0.23);
+            -o-animation: move 2.5s 400ms infinite cubic-bezier(0.2, 0.64, 0.81, 0.23);
+            animation: move 2.5s 400ms infinite cubic-bezier(0.2, 0.64, 0.81, 0.23);
+        }
+    }
+    .f-progress-linear--progress {
+        background-color: #0078D7;
+        width: 0;
+        height: inherit;
+        transition: 0.3s ease-in;
+        position: relative;
+    }
+    &.f-progress-linear--indeterminate {
+        .f-progress-linear--track {
+            background-color: transparent;
+        }
+    }
+}
+
+@-webkit-keyframes move {
+	0% {
+		left: -4px;
+		background-color: transparent;
+	}
+	25%,75% {
+		background-color: #0078D7;
+	}
+	100% {
+		left: calc(100% + 4px);
+		background-color: transparent;
+	}
+}
+@-moz-keyframes move {
+	0% {
+		left: -4px;
+		background-color: transparent;
+	}
+	25%,75% {
+		background-color: #0078D7;
+	}
+	100% {
+		left: calc(100% + 4px);
+		background-color: transparent;
+	}
+}
+@-ms-keyframes move {
+	0% {
+		left: -4px;
+		background-color: transparent;
+	}
+	25%,75% {
+		background-color: #0078D7;
+	}
+	100% {
+		left: calc(100% + 4px);
+		background-color: transparent;
+	}
+}
+@-o-keyframes move {
+	0% {
+		left: -4px;
+		background-color: transparent;
+	}
+	25%,75% {
+		background-color: #0078D7;
+	}
+	100% {
+		left: calc(100% + 4px);
+		background-color: transparent;
+	}
+}
+@keyframes move {
+	0% {
+		left: -4px;
+		background-color: transparent;
+	}
+	25%,75% {
+		background-color: #0078D7;
+	}
+	100% {
+		left: calc(100% + 4px);
+		background-color: transparent;
+	}
+}

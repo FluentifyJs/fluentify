@@ -1,0 +1,25 @@
+.f-input {
+    display: inline-block;
+    span {
+        display: block;
+        margin-bottom: 10px;
+    }
+    input {
+        height: 36px;
+        line-height: 28px;
+        border: 2px solid rgba(0,0,0,0.4);
+        min-width: 296px;
+        padding: 8px 11px;
+        box-sizing: border-box;
+        font-size: 15px;
+        font-weight: 500;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+        -webkit-appearance: none;
+        &:focus {
+            outline: none;
+            border-color: #0078D7;
+        }
+    }
+}

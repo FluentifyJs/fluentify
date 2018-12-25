@@ -1,0 +1,15 @@
+.f-radio-group {
+    &>label {
+        margin-bottom: 20px;
+        display: inline-block;
+    }
+    .f-radio-group--wrap {
+        &.f-radio-group--wrap__vertical {
+            .f-radio {
+                display: block;
+                margin-bottom: 24px;
+                margin-right: 0;
+            }
+        }
+    }
+}
