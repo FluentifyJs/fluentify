@@ -1,25 +1,27 @@
 /* eslint-disable no-undef */
-const webpack = require('webpack')
-// const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const { resolve } = require('path')
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
+// const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 
 const {
   filename,
-  version
+  vueLoaders
 } = require('./utils')
 
 const plugins = [
-  new webpack.DefinePlugin({
-    '__VERSION__': JSON.stringify(version),
-    'process.env.NODE_ENV': '"test"'
-  }),
   new VueLoaderPlugin(),
-  new UglifyJsPlugin()
+  new MiniCssExtractPlugin({
+    // Options similar to the same options in webpackOptions.output
+    // both options are optional
+    filename: `${filename}.css`,
+    chunkFilename: '[id].css',
+    disable: /^(common|test)$/.test(process.env.NODE_ENV)
+  })
 ]
 
 module.exports = {
+  mode: 'development',
   output: {
     path: resolve(__dirname, '../dist'),
     filename: `${filename}.common.js`
@@ -35,7 +37,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /.js?$/,
+        test: /\.js$/,
         use: 'babel-loader',
         include: [
           resolve(__dirname, '../src'),
@@ -46,12 +48,24 @@ module.exports = {
         test: /\.vue$/,
         loader: 'vue-loader',
         options: {
+          use: vueLoaders,
           postcss: [require('postcss-cssnext')()]
         }
       },
       {
         loader: 'css-loader',
         test: /\.css$/
+      },
+      { 
+        test: /\.(ttf|eot|woff2?|svg)$/,
+        use: [
+          {
+            loader: 'url-loader'
+          }
+        ],
+        include: [
+          resolve(__dirname, '../src/icons')
+        ]
       }
     ]
   },

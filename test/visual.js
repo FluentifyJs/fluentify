@@ -1,4 +1,4 @@
-import 'style-loader!css-loader!mocha-css'
+import '!!style-loader!!css-loader!mocha-css'
 
 import '../src/scss/fluentify.scss'
 

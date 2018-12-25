@@ -5,9 +5,9 @@ import { nextTick } from './wait-for-update'
 export function dataPropagationTest (Component) {
   return function () {
     const spy = sinon.spy()
-    const vm = createVM(this, function (h) {
+    const vm = createVM(this, function () {
       return (
-          <Component staticClass='custom' onClick={spy}>Hello</Component>
+        <Component staticClass='custom' onClick={spy}>Hello</Component>
       )
     })
     spy.should.have.not.been.called
@@ -22,7 +22,7 @@ export function attrTest (it, base, Component, attr) {
 
   attrs.forEach(attr => {
     it(attr, function (done) {
-      const vm = createVM(this, function (h) {
+      const vm = createVM(this, function () {
         const opts = {
           props: {
             [camelcase(attr)]: this.active

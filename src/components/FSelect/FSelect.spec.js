@@ -20,6 +20,6 @@ describe('FSelect.vue', function () {
       }
     )
 
-    expect(vm.$el.querySelectorAll('.f-select').length).to.be.equal(1)
+    expect(vm.$el.querySelectorAll('.f-select select').length).to.be.equal(1)
   })
 })

@@ -39,10 +39,22 @@ module.exports = merge(base, {
   module: {
     rules: [
       {
-        test: /.scss$/,
-        loader: vueLoaders.scss,
+        test: /\.scss$/,
+        use: vueLoaders.scss,
         include: [
-          resolve(__dirname, '../src')
+          resolve(__dirname, '../src'),
+          resolve(__dirname, '../node_modules')
+        ]
+      },
+      { 
+        test: /\.(ttf|eot|woff2?|svg)$/,
+        use: [
+          {
+            loader: 'url-loader',
+          }
+        ],
+        include: [
+          resolve(__dirname, '../src/icons')
         ]
       }
     ]
@@ -68,6 +80,18 @@ module.exports = merge(base, {
     })
   ],
   devtool: '#eval-source-map',
+  optimization: {
+    splitChunks: {
+      cacheGroups: {
+        vendor: {
+          chunks: 'initial',
+          test: resolve(__dirname, '../node_modules'),
+          name: 'vendor',
+          enforce: true
+        }
+      }
+    }
+  },
   devServer: {
     inline: true,
     stats: {
@@ -79,5 +103,8 @@ module.exports = merge(base, {
   },
   performance: {
     hints: false
+  },
+  node: {
+    fs: 'empty'
   }
 })

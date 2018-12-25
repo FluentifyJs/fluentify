@@ -9,10 +9,12 @@
     margin-right: 10px;
     line-height: normal;
     vertical-align: top;
+
     .f-radio--selection {
         position: relative;
         display: table-cell;
         vertical-align: top;
+
         input {
             height: 20px;
             width: 20px;
@@ -27,9 +29,11 @@
             opacity: 0;
             vertical-align: top;
             display: inline-block;
+
             &:focus {
                 outline: none;
             }
+
             &+ span {
                 border: 2px solid #000000;
                 background-color: transparent;
@@ -44,11 +48,13 @@
                 text-align: center;
                 border-radius: 100%
             }
+
             &:checked {
                 &+ span {
                     border-color: #0078D7;
                     background-color: transparent;
                     color: #fff;
+
                     &:after {
                         position: absolute;
                         z-index: 1;
@@ -63,20 +69,24 @@
                     }
                 }
             }
+
             &:disabled {
                 &+ span {
                     border-color: rgba(0,0,0,0.4);
                     background-color: #ffffff;
                     color: rgba(0,0,0,0.4);
+
                     &:before, &:after {
                         background-color: rgba(0,0,0,0.4);
                     }
+
                     &+ label {
                         color: rgba(0,0,0,0.4);
                     }
                 }
             }
         }
+
         &+ label {
             color: #000000;
             display: table-cell;
@@ -84,8 +94,10 @@
             vertical-align: top;
             line-height: 18px;
             padding-left: 8px;
+            font-size: 15px;
         }
     }
+    
     &.f-radio--disabled {
         .f-radio--selection {
             &+ label {

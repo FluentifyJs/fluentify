@@ -10,10 +10,12 @@
     background-color: #696969;
     color: #fff;
     line-height: 36px;
+
     img {
         border-radius: 100%;
         display: block;
     }
+    
     &.f-avatar--tile, &.f-avatar--tile img {
         border-radius: 0;
     }

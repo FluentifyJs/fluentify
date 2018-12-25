@@ -1,9 +1,10 @@
 .f-btn {
     font-size: 15px;
-    padding: 10px 20px 6px 22px;
+    padding: 10px 20px 10px 22px;
     font-weight: 600;
     max-width: 100%;
     display: inline-block;
+    display: inline-flex;
     overflow: hidden;
     transition: all 200ms ease-in-out;
     box-shadow: 0 4px 8px 0 transparent;
@@ -18,20 +19,24 @@
     outline: 1px solid transparent;
     outline-offset: -3px;
     vertical-align: middle;
+
     &:active {
         -ms-transform: scale(.98);
         -webkit-transform: scale(.98);
         transform: scale(.98);
     }
+
     &:focus {
         border-color: #000;
         outline: 2px solid #000;
     }
+
     &:hover {
         span {
             box-shadow: 0 2px currentColor;
         }
     }
+
     span {
         max-width: 100%;
         display: inline-block;
@@ -40,6 +45,7 @@
         text-overflow: clip;
         overflow: hidden;
         transition: all 200ms ease-in-out;
+        
         &:before {
             content: "";
             display: block;
@@ -50,25 +56,35 @@
             left: 0;
         }
     }
+
     &.f-btn-primary {
         background: #0067b8;
         color: #fff;
+
         &:hover, &:focus {
             background: #005da6;
         }
+
         &:active {
             background: #005293;
         }
     }
+
     &.f-btn-secondary {
         background: #ff0000;
         color: #fff;
+
         &:hover, &:focus {
             background: #e90000;
         }
+
         &:active {
             background: #c40000;
         }
+    }
+
+    &.f-btn--flat {
+        background-color: transparent;
     }
 }
 
@@ -79,10 +95,12 @@
         border-radius: 2px;
         transition: all 0.2s ease-in-out 0s;
     }
+
     &:focus {
         outline: none;
     }
 }
+
 [aria-expanded="true"] {
     .f-btn {
         text-decoration: none;

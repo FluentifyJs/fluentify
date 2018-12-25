@@ -1,6 +1,7 @@
 <template>
   <button
     class="f-btn"
+    :class="{ 'f-btn--flat': flat }"
   >
     <span class="hide-focus">
       <slot />
@@ -21,6 +22,10 @@ export default {
       default: null
     },
     block: {
+      type: Boolean,
+      default: false
+    },
+    flat: {
       type: Boolean,
       default: false
     }

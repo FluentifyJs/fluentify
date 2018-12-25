@@ -6,9 +6,11 @@
     -webkit-touch-callout: none;
     -o-user-select: none;
     -moz-user-select: none;
+
     .f-checkbox--selection {
         position: relative;
         display: inline-block;
+    
         input {
             height: 20px;
             width: 20px;
@@ -25,9 +27,11 @@
             opacity: 0;
             vertical-align: top;
             display: inline-block;
+    
             &:focus {
                 outline: none;
             }
+    
             &+ span {
                 border: 2px solid #000000;
                 background-color: #FFFFFF;
@@ -41,11 +45,13 @@
                 line-height: 16px;
                 text-align: center;
             }
+    
             &:checked {
                 &+ span {
                     border-color: #0078D7;
                     background-color: #0078D7;
                     color: #fff;
+    
                     &:before, &:after {
                         position: absolute;
                         z-index: 1;
@@ -53,6 +59,7 @@
                         display: block;
                         background-color: #ffffff;
                     }
+    
                     &:before {
                         height: 1.5px;
                         width: 7px;
@@ -60,6 +67,7 @@
                         top: 8px;
                         left: 0px;
                     }
+    
                     &:after {
                         height: 1.5px;
                         width: 13px;
@@ -69,11 +77,13 @@
                     }
                 }
             }
+    
             &:indeterminate {
                 &+ span {
                     border-color: #0078D7;
                     background-color: #0078D7;
                     color: #fff;
+    
                     &:before, &:after {
                         position: absolute;
                         z-index: 1;
@@ -88,25 +98,31 @@
                     }
                 }
             }
+   
             &:disabled {
                 &+ span {
                     border-color: rgba(0,0,0,0.4);
                     background-color: #ffffff;
                     color: rgba(0,0,0,0.4);
+   
                     &:before, &:after {
                         background-color: rgba(0,0,0,0.4);
                     }
+   
                     &+ label {
                         color: rgba(0,0,0,0.4);
                     }
                 }
             }
         }
+   
         &+ label {
             color: #000000;
             display: inline-block;
             cursor: pointer;
+            font-size: 15px;
         }
+   
         &:disabled {
             &+ label {
                 color: rgba(0,0,0,0.4);

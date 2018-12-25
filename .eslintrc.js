@@ -18,10 +18,6 @@ module.exports = {
       "error",
       2
     ],
-    "linebreak-style": [
-      "error",
-      "unix"
-    ],
     "quotes": [
       "error",
       "single"
@@ -31,5 +27,13 @@ module.exports = {
       "never"
     ],
     "vue/no-use-v-if-with-v-for": 'off'
-  }
+  },
+  "overrides": [
+    {
+      "files": ["*.vue"],
+      "rules": {
+        "indent": "off"
+      }
+    }
+  ]
 };

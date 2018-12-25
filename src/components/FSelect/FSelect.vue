@@ -1,15 +1,16 @@
 <template>
-  <select
-    v-model="value"
-    class="f-select"
-  >
-    <option
-      v-for="(item, index) in items"
-      :key="index"
+  <div class="f-select">
+    <select
+      v-model="value"
     >
-      {{ item }}
-    </option>
-  </select>
+      <option
+        v-for="(item, index) in items"
+        :key="index"
+      >
+        {{ item }}
+      </option>
+    </select>
+  </div>
 </template>
 
 <script>

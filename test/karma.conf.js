@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 const merge = require('webpack-merge')
 const baseConfig = require('../build/webpack.config.dev.js')
 

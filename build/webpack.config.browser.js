@@ -23,6 +23,17 @@ module.exports = merge(base, {
         include: [
           resolve(__dirname, '../src')
         ]
+      },
+      { 
+        test: /\.(ttf|eot|woff2?|svg)$/,
+        use: [
+          {
+            loader: 'url-loader'
+          }
+        ],
+        include: [
+          resolve(__dirname, '../src/icons')
+        ]
       }
     ]
   },
