@@ -1,0 +1,25 @@
+.f-video {
+    position: relative;
+    video {
+        display: block;
+    }
+}
+.f-video-controls {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(#FFFFFF, 0.6);
+    &>div {
+        display: inline-flex;
+        &.f-video-controls-slider {
+            width: 100%;
+            padding: 0 10px;
+            &>input[type="range"] {
+                width: 100%;
+            }
+        }
+    }
+}
