@@ -1,15 +1,19 @@
 <template>
-  <button
+  <div
     class="f-list"
   >
     <slot />
-  </button>
+  </div>
 </template>
 
 <script>
 export default {
   name: 'FList',
   props: {
+    value: {
+      type: [String, Number, Object],
+      default: null
+    }
   },
   data () {
     return {}
