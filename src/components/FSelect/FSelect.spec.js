@@ -7,7 +7,7 @@ describe('FSelect.vue', function () {
   it('should render correct contents', function () {
     const vm = createVM(
       this,
-      '<FSelect :items="itemsArrayOfString" />',
+      '<FSelect :items="itemsArrayOfString" label="Awesome label for FSelect component" />',
       {
         components: {
           FSelect

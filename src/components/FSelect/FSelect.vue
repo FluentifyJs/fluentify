@@ -1,15 +1,24 @@
 <template>
   <div class="f-select">
-    <select
-      v-model="value"
+    <label
+      v-if="label"
+      :for="`f-select-${_uid}`"
     >
-      <option
-        v-for="(item, index) in items"
-        :key="index"
+      {{ label }}
+    </label>
+    <div class="f-select-wrap">
+      <select
+        :id="`f-select-${_uid}`"
+        v-model="value"
       >
-        {{ item }}
-      </option>
-    </select>
+        <option
+          v-for="(item, index) in items"
+          :key="index"
+        >
+          {{ item }}
+        </option>
+      </select>
+    </div>
   </div>
 </template>
 
