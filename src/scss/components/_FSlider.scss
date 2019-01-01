@@ -1,0 +1,49 @@
+.f-slider {
+    margin: 10px 0;
+
+    label {
+        display: block;
+        margin-bottom: 10px;
+        font-size: 15px;
+        user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        -webkit-touch-callout: none;
+        -o-user-select: none;
+        -moz-user-select: none;
+    }
+
+    .f-slider-wrap {
+        width: auto;
+        padding: 18px 0;
+        .f-slider-bar {
+            height: 2px;
+            position: relative;
+            display: block;
+            border-radius: 15px;
+            background-color: rgba(#000000, 0.4);
+
+            .f-slider-bar__handle {
+                width: 8px;
+                height: 24px;
+                top: 50%;
+                position: absolute;
+                border-radius: 12px;
+                background-color: #0078D7;
+                box-shadow: 0.5px 0.5px 2px 1px rgba(0, 0, 0, 0.32);
+                transition: all 0s;
+                will-change: transform;
+                cursor: pointer;
+                z-index: 3;
+                transition-duration: 0s;
+                left: 0px;
+                transform: translate(-50%, -50%);
+            }
+            .f-slider-bar__process {
+                background-color: #0078D7;
+                width: 0px;
+                height: 2px;
+            }
+        }
+    }
+}
