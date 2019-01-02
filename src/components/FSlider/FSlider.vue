@@ -1,6 +1,8 @@
 <template>
   <div
     class="f-slider"
+    :class="{ 'f-slider--vertical': vertical }"
+    :style="{ 'height': height }"
     @click="barClick"
   >
     <label v-if="label">
@@ -9,6 +11,8 @@
     <div
       ref="slider"
       class="f-slider-wrap"
+      @mousedown="barClick($event); dragStart($event, 0)"
+      @mouseup="dragEnd($event, 0)"
     >
       <div class="f-slider-bar">
         <div
@@ -18,7 +22,7 @@
         />
         <div
           class="f-slider-bar__process"
-          :style="computedProcessWidth"
+          :style="computedProcessWidthOrHeight"
         />
       </div>
     </div>
@@ -33,15 +37,15 @@ export default {
       type: [String, Number, Object],
       default: 0
     },
-    type: {
+    height: {
       type: String,
-      default: 'text'
+      default: null
     },
     disabled: {
       type: Boolean,
       default: false
     },
-    required: {
+    vertical: {
       type: Boolean,
       default: false
     },
@@ -66,13 +70,20 @@ export default {
   },
   computed: {
     computedOffset () {
-      return { left: this.percentage + '%' }
+      if (this.vertical) {
+        return { bottom: this.percentage + '%' }
+      } else {
+        return { left: this.percentage + '%' }
+      }
     },
-    computedProcessWidth () {
-      return { width: this.percentage + '%' }
+    computedProcessWidthOrHeight () {
+      if (this.vertical) {
+        return { height: this.percentage + '%' }
+      } else {
+        return { width: this.percentage + '%' }
+      }
     }
   },
-  watch: {},
   mounted () {
     this.$nextTick(function() {
       this.bindListener()
@@ -80,14 +91,32 @@ export default {
       this.findPercentageOfValue()
     })
   },
+  watch: {
+    tempValue (value) {
+      this.$emit('input', value)
+    },
+    value (value) {
+      this.$set(this, 'tempValue', value)
+      if (value !== null) {
+        this.findSelectedValue()
+        this.findPercentageOfValue()
+      }
+    },
+  },
   methods: {
     bindListener: function() {
       document.addEventListener('mousemove', this.drag)
       document.addEventListener('mouseup', this.dragEnd)
     },
     getPercentage: function(event) {
-      var PositionXOfElement = event.pageX - this.$refs.slider.offsetLeft
-      var percent = (PositionXOfElement / this.$refs.slider.clientWidth) * 100
+      var percent = 0
+      if (this.vertical) {
+        var PositionYOfElement = this.$refs.slider.clientHeight - (event.clientY - this.$refs.slider.getBoundingClientRect().top)
+        percent = (PositionYOfElement / this.$refs.slider.clientHeight) * 100
+      } else {
+        var PositionXOfElement = event.pageX - this.$refs.slider.offsetLeft
+        percent = (PositionXOfElement / this.$refs.slider.clientWidth) * 100
+      }
       if (percent > 100) {
         return 100
       } else if (percent < 0) {
@@ -96,8 +125,8 @@ export default {
         return percent
       }
     },
-    setPercentage: function(pos) {
-      this.percentage = pos
+    setPercentage: function(value) {
+      this.percentage = value
     },
     findSelectedValue () {
       this.tempValue = Math.round(this.max * (this.percentage / 100))
@@ -106,8 +135,8 @@ export default {
       this.setPercentage(Math.round((this.value / this.max) * 100))
     },
     barClick: function(event) {
-      var pos = this.getPercentage(event)
-      this.setPercentage(pos)
+      var percentage = this.getPercentage(event)
+      this.setPercentage(percentage)
       this.findSelectedValue()
     },
     dragStart: function() {

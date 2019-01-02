@@ -1,16 +1,16 @@
 .f-slider {
     margin: 10px 0;
+    user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    -webkit-touch-callout: none;
+    -o-user-select: none;
+    -moz-user-select: none;
 
     label {
         display: block;
         margin-bottom: 10px;
         font-size: 15px;
-        user-select: none;
-        -webkit-user-select: none;
-        -ms-user-select: none;
-        -webkit-touch-callout: none;
-        -o-user-select: none;
-        -moz-user-select: none;
     }
 
     .f-slider-wrap {
@@ -43,6 +43,48 @@
                 background-color: #0078D7;
                 width: 0px;
                 height: 2px;
+            }
+        }
+    }
+    &.f-slider--vertical {
+        height: 300px;
+        width: 38px;
+        margin: 0 10px;
+        .f-slider-wrap {
+            height: 100%;
+            padding: 0 18px;
+            .f-slider-bar {
+                width: 2px;
+                height: 100%;
+                position: relative;
+                display: block;
+                border-radius: 15px;
+                background-color: rgba(#000000, 0.4);
+
+                .f-slider-bar__handle {
+                    height: 8px;
+                    width: 24px;
+                    left: 50%;
+                    position: absolute;
+                    border-radius: 12px;
+                    background-color: #0078D7;
+                    box-shadow: 0.5px 0.5px 2px 1px rgba(0, 0, 0, 0.32);
+                    transition: all 0s;
+                    will-change: transform;
+                    cursor: pointer;
+                    z-index: 3;
+                    transition-duration: 0s;
+                    bottom: 0px;
+                    top: initial;
+                    transform: translate(-50%, 50%);
+                }
+                .f-slider-bar__process {
+                    background-color: #0078D7;
+                    height: 0px;
+                    width: 2px;
+                    position: absolute;
+                    bottom: 0;
+                }
             }
         }
     }

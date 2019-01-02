@@ -23,4 +23,19 @@ describe('FSlider.vue', function () {
     })
     expect(vm.$el.querySelectorAll('.f-slider').length).to.be.equal(1)
   })
+  it('should render slider as vertical', function () {
+    const vm = createVM(this, `
+    <FSlider v-model="value" min="0" max="550" height="200px" :vertical="true" />
+`, {
+      components: {
+        FSlider
+      },
+      data() {
+        return {
+          value: 300
+        }
+      }
+    })
+    expect(vm.$el.querySelectorAll('.f-slider').length).to.be.equal(1)
+  })
 })
