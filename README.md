@@ -24,7 +24,7 @@ A Vue component framework based on Fluent Design System
 - [x] Radio input
 - [x] Radio Group
 - [ ] Switch
-- [ ] Slider (horizontal/vertical)
+- [x] Slider (horizontal/vertical)
 - [ ] Rating
 - [ ] Autocomplete / Auto-suggest input
 - [ ] Context menu
@@ -44,4 +44,11 @@ A Vue component framework based on Fluent Design System
 - [ ] MDL2 icon font
 
 # Theme
+- [ ] Custom colors support
 - [ ] Dark theme for all components
+
+# Website
+- [ ] Main page
+- [ ] Documentation
+- [ ] Theme generator
+- [ ] Codepen template
