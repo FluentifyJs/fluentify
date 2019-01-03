@@ -1,6 +1,9 @@
 /* eslint-disable no-undef */
 import FMenu from './FMenu.vue'
 import FBtn from '../FBtn/FBtn.vue'
+import FList from '../FList/FList.vue'
+import FListItem from '../FList/FListItem.vue'
+import FListItemContent from '../FList/FListItemContent.vue'
 import {
   createVM
 } from 'src/../test/helpers/utils.js'
@@ -10,22 +13,25 @@ describe('FMenu.vue', function () {
     const vm = createVM(this, `
     <FMenu>
       <FBtn class="f-btn-primary" slot="activator">Dropdown</FBtn>
-      <ul>
-        <li
+      <FList>
+        <FListItem
           v-for="(item, index) in 9"
           :key="index"
           @click="testMethod(item)"
         >
-          <span>
+          <FListItemContent>
           {{ item }}
-          </span>
-        </li>
-      </ul>
+          </FListItemContent>
+        </FListItem>
+      </FList>
     </FMenu>
 `, {
       components: {
         FMenu,
-        FBtn
+        FBtn,
+        FList,
+        FListItem,
+        FListItemContent
       },
       methods: {
         testMethod (index) {

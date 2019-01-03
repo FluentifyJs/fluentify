@@ -2,6 +2,7 @@
   <div
     ref="dropdownMenu"
     class="f-menu"
+    :class="{ 'f-menu-top': top }"
   >
     <div
       ref="activator"
@@ -25,12 +26,19 @@
 export default {
   name: 'FMenu',
   props: {
-    disabled: Boolean
+    disabled: {
+      type: Boolean,
+      default: false
+    },
+    top: {
+      type: Boolean,
+      default: false
+    }
   },
   data () {
     return {
       isActive: false,
-      hoverable: false
+      hoverable: false,
     }
   },
   computed: {},
