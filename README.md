@@ -5,12 +5,14 @@ A Vue component framework based on Fluent Design System
 
 # Todo:
 ## Components
+- [ ] Grid (Rows and Columns using flex)
 - [x] Button
-- [ ] List
-- [ ] List item
-- [ ] List item avatar
-- [ ] List item content (with support of single line, double line and triple line)
+- [x] List
+- [x] List item
+- [x] List item avatar
+- [x] List item content (with support of single line, double line and triple line)
 - [ ] Video player
+- [x] Menu component
 - [ ] Modal / Dialog
 - [ ] Date picker
 - [ ] Date calendar picker
@@ -23,6 +25,13 @@ A Vue component framework based on Fluent Design System
 - [x] Checkbox input
 - [x] Radio input
 - [x] Radio Group
+- [ ] Select (Missing arrow icon)
+- [ ] File picker
+- [ ] Textarea
+- [ ] Datalist
+- [ ] Divider
+- [ ] Data table
+- [ ] Image component
 - [ ] Switch
 - [x] Slider (horizontal/vertical)
 - [ ] Rating
