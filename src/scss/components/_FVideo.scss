@@ -17,8 +17,8 @@
         &.f-video-controls-slider {
             width: 100%;
             padding: 0 10px;
-            &>input[type="range"] {
-                width: 100%;
+            &>* {
+                flex: 1;
             }
         }
     }

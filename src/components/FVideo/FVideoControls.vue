@@ -8,12 +8,15 @@
       <!--<f-btn flat>Forward 30</f-btn>-->
     </div>
     <div class="f-video-controls-slider">
-      <input type="range">
+      <FSlider v-model="progress" />
     </div>
     <div>
-      <FBtn flat>
-        Mute
-      </FBtn>
+      <FMenu top>
+        <FBtn flat slot="activator">
+          Mute
+        </FBtn>
+        <FSlider v-model="volume" vertical height="130px" />
+      </FMenu>
       <FBtn flat>
         Caption
       </FBtn>
@@ -30,10 +33,14 @@
 
 <script>
 import FBtn from '../FBtn/FBtn.vue'
+import FMenu from '../FMenu/FMenu.vue'
+import FSlider from '../FSlider/FSlider.vue'
 export default {
   name: 'FVideoControls',
   components: {
-    FBtn
+    FBtn,
+    FMenu,
+    FSlider
   },
   props: {
     value: {
@@ -58,7 +65,10 @@ export default {
     }
   },
   data () {
-    return {}
+    return {
+      volume: null,
+      progress: null
+    }
   },
   computed: {
     sourcesComputed () {
