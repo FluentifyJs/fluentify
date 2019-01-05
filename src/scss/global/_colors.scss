@@ -1,0 +1,58 @@
+$Accent: #0078D7;
+$AccentLight3: #A6D8FF;
+$AccentLight2: #76B9ED;
+$AccentLight1: #429CE3;
+$AccentDark1: #005A9E;
+$AccentDark2: #004275;
+$AccentDark3: #002642;
+
+$Secondary: #0078D7;
+$SecondaryLight3: #A6D8FF;
+$SecondaryLight2: #76B9ED;
+$SecondaryLight1: #429CE3;
+$SecondaryDark1: #005A9E;
+$SecondaryDark2: #004275;
+$SecondaryDark3: #002642;
+
+$Base: #000000;
+$BaseLow: rgba($Base, 0.2);
+$BaseMediumLow: rgba($Base, 0.4);
+$BaseMedium: rgba($Base, 0.6);
+$BaseMediumHigh: rgba($Base, 0.8);
+$BaseHigh: rgba($Base, 1);
+
+$AltBase: #ffffff;
+$AltLow: rgba($AltBase, 0.2);
+$AltMediumLow: rgba($AltBase, 0.4);
+$AltMedium: rgba($AltBase, 0.6);
+$AltMediumHigh: rgba($AltBase, 0.8);
+$AltHigh: rgba($AltBase, 1);
+
+$ListLow: rgba(#000000, 0.1);
+$ListMedium: rgba(#000000, 0.2);
+$ListAccentLow: rgba(#0078D7, 0.4);
+$ListAccentMedium: rgba(#0078D7, 0.6);
+$ListAccentHigh: rgba(#0078D7, 0.7);
+
+$ChromeLow: #F2F2F2;
+$ChromeMediumLow: #F2F2F2;
+$ChromeMedium: #E6E6E6;
+$ChromeHigh: #CCCCCC;
+
+$ChromeAltLow: #171717;
+
+$ChromeDisabledLow: #7A7A7A;
+$ChromeDisabledHigh: #CCCCCC;
+
+$ChromeBlackLow: rgba(#000000, 0.2);
+$ChromeBlackMediumLow: rgba(#000000, 0.4);
+$ChromeBlackMedium: rgba(#000000, 0.8);
+$ChromeBlackHigh: rgba(#000000, 1);
+
+$ChromeWhite: #FFFFFF;
+
+html {
+    background-color: $Accent;
+    background-color: lighten($Accent, 20.79);
+    background-color: #{$AccentLight1}
+}

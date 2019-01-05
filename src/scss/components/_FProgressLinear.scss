@@ -5,7 +5,7 @@
     position: relative;
 
     .f-progress-linear--track {
-        background-color: rgba(#000000, 0.4);
+        background-color: $BaseMediumLow;
         width: 100%;
         position: absolute;
         top: 0;
@@ -18,7 +18,7 @@
             position: absolute;
             width: 4px;
             height: 4px;
-            background-color: #0078D7;
+            background-color: $Accent;
             border-radius: 100%;
         }
 
@@ -64,7 +64,7 @@
     }
     
     .f-progress-linear--progress {
-        background-color: #0078D7;
+        background-color: $Accent;
         width: 0;
         height: inherit;
         transition: 0.3s ease-in;
@@ -85,7 +85,7 @@
     }
 
     25%,75% {
-        background-color: #0078D7;
+        background-color: $Accent;
     }
 
     100% {
@@ -100,7 +100,7 @@
     }
 
     25%,75% {
-        background-color: #0078D7;
+        background-color: $Accent;
     }
 
     100% {
@@ -115,7 +115,7 @@
     }
 
     25%,75% {
-        background-color: #0078D7;
+        background-color: $Accent;
     }
 
     100% {
@@ -130,7 +130,7 @@
     }
 
     25%,75% {
-        background-color: #0078D7;
+        background-color: $Accent;
     }
 
     100% {
@@ -145,7 +145,7 @@
     }
 
     25%,75% {
-        background-color: #0078D7;
+        background-color: $Accent;
     }
 
     100% {

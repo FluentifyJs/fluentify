@@ -1,0 +1,125 @@
+/**
+ *
+ * Segoe UI font faces
+ *
+ */
+@font-face {
+    font-family: "Segoe UI";
+    font-weight: 200;
+    src: local("Segoe UI Light");
+}
+@font-face {
+    font-family: "Segoe UI";
+    font-weight: 300;
+    src: local("Segoe UI Semilight"), local("Segoe UI");
+}
+@font-face {
+    font-family: "Segoe UI";
+    font-weight: 400;
+    src: local("Segoe UI");
+}
+@font-face {
+    font-family: "Segoe UI";
+    font-weight: 600;
+    src: local("Segoe UI Semibold");
+}
+@font-face {
+    font-family: "Segoe UI";
+    font-weight: 700;
+    src: local("Segoe UI Bold");
+}
+@font-face {
+    font-family: "Segoe UI";
+    font-style: italic;
+    font-weight: 400;
+    src: local("Segoe UI Italic");
+}
+@font-face {
+    font-family: "Segoe UI";
+    font-style: italic;
+    font-weight: 700;
+    src: local("Segoe UI Bold Italic");
+}
+
+/**
+ *
+ * Base typography
+ *
+ */
+body {
+    font-family: "Segoe UI", "SegoeUI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    color: $BaseHigh;
+    caret-color: $BaseHigh;
+}
+
+/**
+ *
+ * Typography classes
+ *
+ */
+.header {
+    font-size: 46px;
+    font-weight: 200;
+}
+.subheader {
+    font-size: 34px;
+    font-weight: 200;
+}
+.title {
+    font-size: 24px;
+    font-weight: 300;
+}
+.subtitle {
+    font-size: 20px;
+    font-weight: 400;
+}
+.subtitlealt {
+    font-size: 18px;
+    font-weight: 400;
+}
+.captionalt {
+    font-size: 13px;
+    font-weight: 400;
+}
+.caption {
+    font-size: 12px;
+    font-weight: 400;
+}
+
+/**
+ *
+ * Font weight classes
+ *
+ */
+.font-weight-light {
+    font-weight: 200;
+}
+.font-weight-semilight {
+    font-weight: 300;
+}
+.font-weight-regular {
+    font-weight: 400;
+}
+.font-weight-semibold {
+    font-weight: 600;
+}
+.font-weight-bold {
+    font-weight: 700;
+}
+
+/**
+ *
+ * Font style classes
+ *
+ */
+.font-style-italic {
+    font-style: italic;
+}
+.font-style-oblique {
+    font-style: oblique;
+}
+.font-style-normal {
+    font-style: normal;
+}

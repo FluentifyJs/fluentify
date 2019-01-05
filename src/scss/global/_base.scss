@@ -11,18 +11,13 @@
 html {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    font-family: sans-serif;
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
 }
 
 body {
-    font-size: 15px;
-    font-family: "Segoe UI", "SegoeUI", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    min-width: 320px;
     margin: 0;
-    color: #000;
-    background-color: #FFF;
+    background-color: $ChromeWhite;
 }
 
 button, input, select, textarea {

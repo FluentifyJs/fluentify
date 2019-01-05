@@ -34,9 +34,9 @@
     }
     a.f-list-item {
         cursor: pointer;
-        background: #f2f2f2;
+        background: $ListLow;
         &:hover {
-            background: #d9d9d9;
+            background: $ListMedium;
         }
     }
 }
