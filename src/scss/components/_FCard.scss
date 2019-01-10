@@ -1,0 +1,30 @@
+.f-card {
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px, rgba(0, 0, 0, 0.1) 0px 0.5px 1px;
+    background-color: #FFFFFF;
+    cursor: pointer;
+    position: relative;
+    backface-visibility: hidden;
+    color: #000000;
+    transition: all 0.333s ease-out 0s;
+    border-radius: 4px;
+    &:hover {
+        transform: translate3d(0px, -1px, 0px);
+        box-shadow: rgba(0, 0, 0, 0.2) 0px 19px 43px, rgba(0, 0, 0, 0.1) 0px 4px 11px;
+    }
+
+    &>.caption {
+        border-bottom: 1px solid rgba(115, 115, 115, 0.1);
+        padding: 12px;
+        @media (min-width: 540px) {
+            padding: 16px 24px 15px;
+        }
+    }
+    &>div {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto auto auto minmax(min-content, 1fr) auto;
+        gap: 0px 24px;
+        grid-column: 1 / 7;
+        grid-row: 4 / 5;
+    }
+}

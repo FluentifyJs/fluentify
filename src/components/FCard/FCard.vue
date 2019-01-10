@@ -1,30 +1,16 @@
 <template>
   <div
-    ref="dropdownMenu"
-    class="f-menu"
+    ref="card"
+    class="f-card"
   >
-    <div
-      ref="activator"
-      class="f-menu-activator"
-      :aria-expanded="!!(!disabled && isActive) ? 'true': 'false'"
-      @click="openMenu"
-    >
-      <slot name="activator" />
-    </div>
-    <div
-      v-show="!disabled && isActive"
-      class="f-menu-content"
-    >
-      <slot />
-    </div>
+    <slot />
   </div>
 </template>
 
 <script>
 export default {
-  name: 'FMenu',
+  name: 'FCard',
   props: {
-    disabled: Boolean
   },
   data () {
     return {
@@ -36,7 +22,6 @@ export default {
   },
   created () {
   },
-
   beforeDestroy () {
   },
   methods: {
