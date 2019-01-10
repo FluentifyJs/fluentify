@@ -50,9 +50,3 @@ $ChromeBlackMedium: rgba(#000000, 0.8);
 $ChromeBlackHigh: rgba(#000000, 1);
 
 $ChromeWhite: #FFFFFF;
-
-html {
-    background-color: $Accent;
-    background-color: lighten($Accent, 20.79);
-    background-color: #{$AccentLight1}
-}
