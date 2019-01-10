@@ -14,6 +14,7 @@ import FListItemAvatar from './FListItemAvatar'
 import FListItemContent from './FListItemContent'
 import FMenu from './FMenu'
 import FProgressLinear from './FProgressLinear'
+import FImg from './FImg'
 
 export {
   FBtn,
@@ -30,5 +31,6 @@ export {
   FListItemAvatar,
   FListItemContent,
   FMenu,
-  FProgressLinear
+  FProgressLinear,
+  FImg
 }
