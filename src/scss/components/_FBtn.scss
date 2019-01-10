@@ -9,7 +9,7 @@
     transition: all 200ms ease-in-out;
     box-shadow: 0 4px 8px 0 transparent;
     white-space: nowrap;
-    color: #000;
+    color: $BaseHigh;
     text-align: center;
     text-decoration: none;
     line-height: 1.3;
@@ -27,8 +27,8 @@
     }
 
     &:focus {
-        border-color: #000;
-        outline: 2px solid #000;
+        border-color: $BaseHigh;
+        outline: 2px solid $BaseHigh;
     }
 
     &:hover {
@@ -58,28 +58,28 @@
     }
 
     &.f-btn-primary {
-        background: #0067b8;
-        color: #fff;
+        background: $Accent;
+        color: $ChromeWhite;
 
         &:hover, &:focus {
-            background: #005da6;
+            background: $AccentDark1;
         }
 
         &:active {
-            background: #005293;
+            background: $AccentDark2;
         }
     }
 
     &.f-btn-secondary {
-        background: #ff0000;
-        color: #fff;
+        background: $Secondary;
+        color: $ChromeWhite;
 
         &:hover, &:focus {
-            background: #e90000;
+            background: $SecondaryDark1;
         }
 
         &:active {
-            background: #c40000;
+            background: $SecondaryDark2;
         }
     }
 
@@ -90,8 +90,8 @@
 
 [aria-expanded] {
     .f-btn {
-        color: rgb(255, 255, 255);
-        background-color: rgb(0, 120, 212) !important;
+        color: $ChromeWhite;
+        background-color: $Accent !important;
         border-radius: 2px;
         transition: all 0.2s ease-in-out 0s;
     }
@@ -105,6 +105,6 @@
     .f-btn {
         text-decoration: none;
         outline: none;
-        background: rgb(36, 58, 94) !important;
+        background: $SecondaryDark3 !important;
     }
 }

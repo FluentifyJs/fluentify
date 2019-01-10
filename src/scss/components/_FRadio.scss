@@ -35,7 +35,7 @@
             }
 
             &+ span {
-                border: 2px solid #000000;
+                border: 2px solid $BaseHigh;
                 background-color: transparent;
                 height: 20px;
                 width: 20px;
@@ -51,16 +51,16 @@
 
             &:checked {
                 &+ span {
-                    border-color: #0078D7;
+                    border-color: $Accent;
                     background-color: transparent;
-                    color: #fff;
+                    color: $ChromeWhite;
 
                     &:after {
                         position: absolute;
                         z-index: 1;
                         content: "";
                         display: block;
-                        background-color: #000000;
+                        background-color: $BaseHigh;
                         width: 10px;
                         height: 10px;
                         top: 3px;
@@ -72,23 +72,23 @@
 
             &:disabled {
                 &+ span {
-                    border-color: rgba(0,0,0,0.4);
-                    background-color: #ffffff;
-                    color: rgba(0,0,0,0.4);
+                    border-color: $BaseMediumLow;
+                    background-color: $ChromeWhite;
+                    color: $BaseMediumLow;
 
                     &:before, &:after {
-                        background-color: rgba(0,0,0,0.4);
+                        background-color: $BaseMediumLow;
                     }
 
                     &+ label {
-                        color: rgba(0,0,0,0.4);
+                        color: $BaseMediumLow;
                     }
                 }
             }
         }
 
         &+ label {
-            color: #000000;
+            color: $BaseHigh;
             display: table-cell;
             cursor: pointer;
             vertical-align: top;
@@ -101,7 +101,7 @@
     &.f-radio--disabled {
         .f-radio--selection {
             &+ label {
-                color: rgba(0,0,0,0.4);
+                color: $BaseMediumLow;
             }
         }
     }

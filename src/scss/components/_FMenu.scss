@@ -9,16 +9,16 @@
 
     .f-menu-content {
         text-align: left;
-        box-shadow: rgba(0, 0, 0, 0.22) 0px 19px 43px, rgba(0, 0, 0, 0.18) 0px 4px 11px;
+        box-shadow: $BaseMediumLow 0px 19px 43px, $BaseLow 0px 4px 11px;
         transform: translateY(0px);
         position: absolute;
         border-radius: 0 2px 2px 2px;
         z-index: 500;
-        color: rgb(80, 80, 80);
+        color: $BaseHigh;
         cursor: default;
         min-width: 64px;
         max-width: 368px;
-        background: #f2f2f2;
+        background: $ChromeMediumLow;
         width: 240px;
     }
     &.f-menu-top {

@@ -16,7 +16,7 @@
     input {
         height: 36px;
         line-height: 28px;
-        border: 2px solid rgba(0,0,0,0.4);
+        border: 2px solid $BaseMediumLow;
         min-width: 296px;
         padding: 8px 11px;
         box-sizing: border-box;
@@ -29,7 +29,7 @@
         
         &:focus {
             outline: none;
-            border-color: #0078D7;
+            border-color: $Accent;
         }
     }
 }
