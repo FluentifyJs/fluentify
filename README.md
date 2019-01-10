@@ -1,6 +1,9 @@
 # fluentify
 A Vue component framework based on Fluent Design System
 
+[![codebeat badge](https://codebeat.co/badges/d2cb26e8-55e3-40a7-b4be-bc9811f0cd98)](https://codebeat.co/projects/github-com-fluentifyjs-fluentify-master)
+
+
 ## This Components framework is *Work in progress*, please keep that in mind that it's not ready for production yet, feel free to contribute and get it ready faster 
 
 # Todo:
