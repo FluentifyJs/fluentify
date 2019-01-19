@@ -1,7 +1,7 @@
 {
-  "name": "fluentify",
-  "version": "0.0.0",
-  "description": "A Vue.js Plugin",
+  "name": "@fluentify/fluentify",
+  "version": "0.0.1",
+  "description": "Fluent design components based framework for Vue.js",
   "author": "Alexander Wennerstrøm <alexanderw0310@gmail.com>",
   "main": "dist/fluentify.common.js",
   "module": "dist/fluentify.esm.js",
@@ -157,12 +157,17 @@
     "url": "https://github.com/AlexanderYW/fluentify/issues"
   },
   "homepage": "https://github.com/AlexanderYW/fluentify#readme",
-  "license": {
-    "type": "MIT",
-    "url": "http://www.opensource.org/licenses/mit-license.php"
-  },
+  "license": "MIT",
   "browserslist": [
     "last 2 versions"
   ],
-  "dependencies": {}
+  "dependencies": {},
+  "keywords": [
+    "vue",
+    "vuejs",
+    "fluent",
+    "design",
+    "framework",
+    "components"
+  ]
 }
