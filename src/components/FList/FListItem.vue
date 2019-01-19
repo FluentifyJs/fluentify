@@ -1,24 +1,24 @@
 <template>
-  <router-link
+  <RouterLink
+    v-if="to"
+    ref="link"
     class="f-list-item"
     :class="{ 'f-list-item__active': active }"
-    ref="link"
-    v-if="to"
   >
     <slot />
-  </router-link>
+  </RouterLink>
   <a
+    v-else-if="hasClickListener"
+    ref="link"
     class="f-list-item"
     :class="{ 'f-list-item__active': active }"
-    ref="link"
-    v-else-if="hasClickListener"
     @click="$emit('click')"
   >
     <slot />
   </a>
   <div
-    class="f-list-item"
     v-else
+    class="f-list-item"
   >
     <slot />
   </div>

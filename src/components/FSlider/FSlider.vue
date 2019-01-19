@@ -84,13 +84,6 @@ export default {
       }
     }
   },
-  mounted () {
-    this.$nextTick(function() {
-      this.bindListener()
-      this.findSelectedValue()
-      this.findPercentageOfValue()
-    })
-  },
   watch: {
     tempValue (value) {
       this.$emit('input', value)
@@ -102,6 +95,13 @@ export default {
         this.findPercentageOfValue()
       }
     },
+  },
+  mounted () {
+    this.$nextTick(function() {
+      this.bindListener()
+      this.findSelectedValue()
+      this.findPercentageOfValue()
+    })
   },
   methods: {
     bindListener: function() {
