@@ -1,4 +1,5 @@
-
+import FContainer from './FContainer'
+import FGrid from './FContainer'
 import FBtn from './FBtn'
 import FRadio from './FRadio'
 import FRadioGroup from './FRadioGroup'
@@ -14,6 +15,8 @@ import FProgressLinear from './FProgressLinear'
 import FImg from './FImg'
 
 export {
+  FContainer,
+  FGrid,
   FBtn,
   FRadio,
   FRadioGroup,

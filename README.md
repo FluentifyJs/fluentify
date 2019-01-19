@@ -8,12 +8,14 @@ A Vue component framework based on Fluent Design System
 
 # Todo:
 ## Components
-- [ ] Grid (Rows and Columns using flex)
+- [x] Container
+- [x] Grid - Rows and Columns using css grid (Room for improvements)
 - [x] Button
 - [x] List
 - [x] List item
 - [x] List item avatar
 - [x] List item content (with support of single line, double line and triple line)
+- [ ] Card
 - [ ] Video player
 - [x] Menu component
 - [ ] Modal / Dialog
