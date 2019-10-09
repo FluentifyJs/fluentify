@@ -1,39 +1,39 @@
 module.exports = {
   root: true,
-  "env": {
-    "browser": true,
-    "commonjs": true,
-    "es6": true
+  'env': {
+    'browser': true,
+    'commonjs': true,
+    'es6': true
   },
   extends: [
     'eslint:recommended',
     'plugin:vue/recommended'
   ],
-  "parserOptions": {
-    "ecmaVersion": 2015,
-    "sourceType": "module"
+  'parserOptions': {
+    'ecmaVersion': 2015,
+    'sourceType': 'module'
   },
-  "rules": {
-    "indent": [
-      "error",
+  'rules': {
+    'indent': [
+      'error',
       2
     ],
-    "quotes": [
-      "error",
-      "single"
+    'quotes': [
+      'error',
+      'single'
     ],
-    "semi": [
-      "error",
-      "never"
+    'semi': [
+      'error',
+      'never'
     ],
-    "vue/no-use-v-if-with-v-for": 'off'
+    'vue/no-use-v-if-with-v-for': 'off'
   },
-  "overrides": [
+  'overrides': [
     {
-      "files": ["*.vue"],
-      "rules": {
-        "indent": "off"
+      'files': ['*.vue'],
+      'rules': {
+        'indent': 'off'
       }
     }
   ]
-};
+}

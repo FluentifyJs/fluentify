@@ -1,4 +1,4 @@
-import FBtn from './Fbtn'
+import FBtn from './FBtn'
 
 import { use, registerComponent } from '../../utils/helper'
 
