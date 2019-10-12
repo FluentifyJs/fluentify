@@ -63,3 +63,6 @@ typings/
 /dist
 /reports
 /test/dist
+
+# storybook
+/storybook-static
