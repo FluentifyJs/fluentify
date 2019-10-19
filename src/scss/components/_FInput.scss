@@ -26,10 +26,15 @@
         -moz-box-shadow: none;
         box-shadow: none;
         -webkit-appearance: none;
+        width: 100%;
         
         &:focus {
             outline: none;
             border-color: $Accent;
         }
+    }
+
+    &.f-input--block {
+        width: 100%;
     }
 }

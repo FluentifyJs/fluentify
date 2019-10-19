@@ -1,0 +1,48 @@
+/* eslint-disable import/no-extraneous-dependencies */
+import { storiesOf } from '@storybook/vue'
+import { action } from '@storybook/addon-actions'
+
+// import * as components from '../components'
+import FInput from '../components/FInput/FInput.vue'
+
+storiesOf('FInput', module)
+  .add('text', () => ({
+    components: { FInput },
+    template: '<f-input value="text" type="text" />',
+    
+  }))
+  .add('text with label', () => ({
+    components: { FInput },
+    template: '<f-input label="Text with label" value="text" type="text" />',
+    
+  }))
+  .add('text disabled', () => ({
+    components: { FInput },
+    template: '<f-input label="Disabled" disabled value="text" type="text" />',
+    
+  }))
+  .add('text required', () => ({
+    components: { FInput },
+    template: '<f-input label="Required" required value="" type="text" />',
+    
+  }))
+  .add('text block', () => ({
+    components: { FInput },
+    template: '<f-input label="Block" block value="" type="text" />',
+    
+  }))
+  .add('password', () => ({
+    components: { FInput },
+    template: '<f-input label="Password" value="password" type="password" />',
+    
+  }))
+  .add('email', () => ({
+    components: { FInput },
+    template: '<f-input label="Email" value="email@outlook.com" type="email" />',
+    
+  }))
+  .add('number', () => ({
+    components: { FInput },
+    template: '<f-input label="Number" value="1234" type="number" />',
+    
+  }))
