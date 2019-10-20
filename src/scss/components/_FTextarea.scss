@@ -1,0 +1,40 @@
+.f-textarea {
+    display: inline-block;
+
+    span {
+        display: block;
+        margin-bottom: 10px;
+        font-size: 15px;
+        user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        -webkit-touch-callout: none;
+        -o-user-select: none;
+        -moz-user-select: none;
+    }
+
+    textarea {
+        line-height: 18px;
+        border: 2px solid $BaseMediumLow;
+        min-width: 296px;
+        min-height: 82px;
+        padding: 8px 11px;
+        box-sizing: border-box;
+        font-size: 15px;
+        font-weight: 500;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+        -webkit-appearance: none;
+        width: 100%;
+        
+        &:focus {
+            outline: none;
+            border-color: $Accent;
+        }
+    }
+
+    &.f-textarea--block {
+        width: 100%;
+    }
+}

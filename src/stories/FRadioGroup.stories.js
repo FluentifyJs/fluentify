@@ -5,7 +5,7 @@ import { storiesOf } from '@storybook/vue'
 import FRadio from '../components/FRadio/FRadio.vue'
 import FRadioGroup from '../components/FRadioGroup/FRadioGroup.vue'
 
-storiesOf('FRadio', module)
+storiesOf('FRadioGroup', module)
   .add('Standard', () => ({
     components: { FRadio, FRadioGroup },
     template: `<div>
