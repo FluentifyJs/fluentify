@@ -1,6 +1,5 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import { storiesOf } from '@storybook/vue'
-import { action } from '@storybook/addon-actions'
 
 // import * as components from '../components'
 import FTextarea from '../components/FTextarea/FTextarea.vue'
@@ -8,7 +7,7 @@ import FTextarea from '../components/FTextarea/FTextarea.vue'
 storiesOf('FTextarea', module)
   .add('text', () => ({
     components: { FTextarea },
-    template: '<f-textarea v-model="text" type="text" @keyup="alert(\'Trigger\')" />',
+    template: '<f-textarea v-model="text" type="text" />',
     data: () => {
       return {
         text: 'text'
