@@ -1,6 +1,5 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import { storiesOf } from '@storybook/vue'
-import { action } from '@storybook/addon-actions'
 
 // import * as components from '../components'
 import FInput from '../components/FInput/FInput.vue'
@@ -8,8 +7,12 @@ import FInput from '../components/FInput/FInput.vue'
 storiesOf('FInput', module)
   .add('text', () => ({
     components: { FInput },
-    template: '<f-input value="text" type="text" />',
-    
+    template: '<div><f-input v-model="text" type="text" /> {{text}}</div>',
+    data: () => {
+      return {
+        text: 'text',
+      }
+    }
   }))
   .add('text with label', () => ({
     components: { FInput },
