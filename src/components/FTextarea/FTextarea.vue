@@ -1,5 +1,8 @@
 <template>
-  <label class="f-textarea" :class="{ 'f-textarea--block': block }">
+  <label
+    class="f-textarea"
+    :class="{ 'f-textarea--block': block }"
+  >
     <span v-if="label">
       {{ label }}
     </span>

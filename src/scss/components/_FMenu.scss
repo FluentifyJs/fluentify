@@ -3,7 +3,7 @@
         display: inline-block;
     }
 
-    [aria-expanded="false"] + ul {
+    [aria-expanded="false"]+ul {
         display: none;
     }
 
@@ -21,6 +21,7 @@
         background: $ChromeMediumLow;
         width: 240px;
     }
+
     &.f-menu-top {
         .f-menu-content {
             bottom: 100%;

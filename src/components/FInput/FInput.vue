@@ -1,5 +1,8 @@
 <template>
-  <label class="f-input" :class="{ 'f-input--block': block }">
+  <label
+    class="f-input" 
+    :class="{ 'f-input--block': block }"
+  >
     <span v-if="label">
       {{ label }}
     </span>

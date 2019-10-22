@@ -1,6 +1,5 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import { storiesOf } from '@storybook/vue'
-import { action } from '@storybook/addon-actions'
 
 // import * as components from '../components'
 import FProgressLinear from '../components/FProgressLinear/FProgressLinear.vue'
