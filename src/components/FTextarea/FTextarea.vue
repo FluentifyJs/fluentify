@@ -1,12 +1,13 @@
 <template>
   <label
-    class="f-input" 
-    :class="{ 'f-input--block': block }"
+    class="f-textarea"
+    :class="{ 'f-textarea--block': block }"
   >
     <span v-if="label">
       {{ label }}
     </span>
-    <input
+    <textarea
+      ref="text"
       :value="value"
       :type="type"
       :required="required"
@@ -14,13 +15,13 @@
       :disabled="disabled"
       v-bind="$attrs"
       v-on="inputListeners"
-    >
+    />
   </label>
 </template>
 
 <script>
 export default {
-  name: 'FInput',
+  name: 'FTextarea',
   props: {
     value: {
       type: [String, Number],
@@ -52,7 +53,8 @@ export default {
     }
   },
   data () {
-    return {}
+    return {
+    }
   },
   computed: {
     inputListeners: function () {
@@ -74,6 +76,7 @@ export default {
   },
   watch: {},
   mounted () {},
-  methods: {}
+  methods: {
+  }
 }
 </script>

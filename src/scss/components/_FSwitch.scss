@@ -1,0 +1,137 @@
+$Width: 44px;
+$Border: 2px;
+$ThumbWidth: 10px;
+$ThumbMargin: 3px;
+
+.f-switch {
+    display: inline-block;
+    user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    -webkit-touch-callout: none;
+    -o-user-select: none;
+    -moz-user-select: none;
+
+    .f-switch--control {
+        position: relative;
+        display: inline-block;
+
+        input {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            cursor: pointer;
+            z-index: 1;
+
+            &+.f-switch--input {
+                border: 2px solid $BaseHigh;
+                background-color: $ChromeWhite;
+                height: 20px;
+                width: 44px;
+                cursor: pointer;
+                line-height: 16px;
+                text-align: left;
+                transition: all 0.2s ease-in-out;
+                border-radius: 10px;
+                position: relative;
+
+                .f-switch--thumb {
+                    border-radius: 100%;
+                    display: inline-block;
+                    margin: 3px;
+                    width: 10px;
+                    height: 10px;
+                    background-color: $BaseHigh;
+                    transition: all 0.2s ease-in-out;
+                }
+            }
+
+            &:checked {
+                &+.f-switch--input {
+                    border-color: $Accent;
+                    background-color: $Accent;
+                    color: $ChromeWhite;
+
+                    .f-switch--thumb {
+                        background-color: $ChromeWhite;
+                        transform: translateX($Width - $ThumbWidth - ($ThumbMargin * 2) - ($Border * 2));
+                    }
+                }
+            }
+
+            &:focus {
+                outline: none;
+            }
+
+            &:active {
+                &+.f-switch--input {
+                    border-color: transparent;
+                    background-color: $BaseMedium;
+                    color: $BaseMedium;
+                    transition: all 0.05s ease-in-out;
+
+                    .f-switch--thumb {
+                        background-color: $ChromeWhite;
+                        transition: all 0.05s ease-in-out;
+                    }
+
+                    &:before,
+                    &:after {
+                        background-color: $BaseMedium;
+                    }
+
+                    &+label {
+                        color: $BaseMedium;
+                    }
+                }
+            }
+
+            &:disabled {
+                &+.f-switch--input {
+                    border-color: $BaseMediumLow;
+                    background-color: $ChromeWhite;
+                    color: $BaseMediumLow;
+
+                    .f-switch--thumb {
+                        background-color: $BaseMediumLow;
+                    }
+
+                    &:before,
+                    &:after {
+                        background-color: $BaseMediumLow;
+                    }
+
+                    &+label {
+                        color: $BaseMediumLow;
+                    }
+                }
+
+                &:checked {
+                    &+.f-switch--input {
+                        border-color: transparent;
+                        background-color: $BaseLow;
+
+                        .f-switch--thumb {
+                            background-color: $BaseLow;
+                        }
+                    }
+                }
+            }
+        }
+
+        &+label {
+            color: $BaseHigh;
+            display: inline-block;
+            cursor: pointer;
+            font-size: 15px;
+            vertical-align: top;
+        }
+
+        &:disabled {
+            &+label {
+                color: $BaseMediumLow;
+            }
+        }
+    }
+}

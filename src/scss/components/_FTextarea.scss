@@ -1,4 +1,4 @@
-.f-input {
+.f-textarea {
     display: inline-block;
 
     span {
@@ -13,11 +13,11 @@
         -moz-user-select: none;
     }
 
-    input {
-        height: 36px;
-        line-height: 28px;
+    textarea {
+        line-height: 18px;
         border: 2px solid $BaseMediumLow;
         min-width: 296px;
+        min-height: 82px;
         padding: 8px 11px;
         box-sizing: border-box;
         font-size: 15px;
@@ -34,7 +34,7 @@
         }
     }
 
-    &.f-input--block {
+    &.f-textarea--block {
         width: 100%;
     }
 }

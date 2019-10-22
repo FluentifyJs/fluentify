@@ -12,7 +12,7 @@
         display: flex;
         line-height: 44px;
         align-items: center;
-        
+
         .f-list-item-avatar {
             display: inline-flex;
             flex: 0 1;
@@ -21,6 +21,7 @@
             padding: 5px;
             align-self: flex-start;
         }
+
         .f-list-item-content {
             display: inline-flex;
             flex: 1;
@@ -32,9 +33,11 @@
             line-height: normal;
         }
     }
+
     a.f-list-item {
         cursor: pointer;
         background: $ListLow;
+
         &:hover {
             background: $ListMedium;
         }

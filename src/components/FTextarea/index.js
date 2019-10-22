@@ -1,10 +1,10 @@
-import FBtn from './FBtn'
+import FTextarea from './FTextarea'
 
 import { use, registerComponent } from '../../utils/helper'
 
 const Plugin = {
   install (Vue) {
-    registerComponent(Vue, FBtn)
+    registerComponent(Vue, FTextarea)
   }
 }
 
@@ -13,5 +13,5 @@ use(Plugin)
 export default Plugin
 
 export {
-  FBtn
+  FTextarea
 }

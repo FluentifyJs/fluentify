@@ -1,11 +1,10 @@
 .f-grid {
-  display: grid;
-  grid-template-columns: repeat($grid-columns, 1fr);
-  grid-template-rows: auto;
-  grid-column-gap: $grid-gutter-width / 2;
-  margin-right: -$grid-gutter-width / 2;
-  margin-left: -$grid-gutter-width / 2;
+    display: grid;
+    grid-template-columns: repeat($grid-columns, 1fr);
+    grid-template-rows: auto;
+    grid-column-gap: $grid-gutter-width / 2;
+    margin-right: -$grid-gutter-width / 2;
+    margin-left: -$grid-gutter-width / 2;
 }
-.f-grid-item {
-  
-}
+
+.f-grid-item {}

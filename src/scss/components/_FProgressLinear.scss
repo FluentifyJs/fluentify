@@ -12,6 +12,7 @@
         left: 0;
         bottom: 0;
         transition: 0.3s ease-in;
+        overflow: hidden;
         
         span {
             display: inline-block;
@@ -23,43 +24,43 @@
         }
 
         span {
-            -webkit-animation: move 2.5s infinite cubic-bezier(0.2, 0.64, 0.81, 0.23);
-            -moz-animation: move 2.5s infinite cubic-bezier(0.2, 0.64, 0.81, 0.23);
-            -ms-animation: move 2.5s infinite cubic-bezier(0.2, 0.64, 0.81, 0.23);
-            -o-animation: move 2.5s infinite cubic-bezier(0.2, 0.64, 0.81, 0.23);
-            animation: move 2.5s infinite cubic-bezier(0.2, 0.64, 0.81, 0.23);
+            -webkit-animation: move 2.5s cubic-bezier(0.2, 0.64, 0.81, 0.23) infinite;
+            -moz-animation: move 2.5s cubic-bezier(0.2, 0.64, 0.81, 0.23) infinite;
+            -ms-animation: move 2.5s cubic-bezier(0.2, 0.64, 0.81, 0.23) infinite;
+            -o-animation: move 2.5s cubic-bezier(0.2, 0.64, 0.81, 0.23) infinite;
+            animation: move 2.5s cubic-bezier(0.2, 0.64, 0.81, 0.23) infinite;
         }
 
         span:nth-child(2) {
-            -webkit-animation: move 2.5s 100ms infinite cubic-bezier(0.2, 0.64, 0.81, 0.23);
-            -moz-animation: move 2.5s 100ms infinite cubic-bezier(0.2, 0.64, 0.81, 0.23);
-            -ms-animation: move 2.5s 100ms infinite cubic-bezier(0.2, 0.64, 0.81, 0.23);
-            -o-animation: move 2.5s 100ms infinite cubic-bezier(0.2, 0.64, 0.81, 0.23);
-            animation: move 2.5s 100ms infinite cubic-bezier(0.2, 0.64, 0.81, 0.23);
+            -webkit-animation: move 2.5s cubic-bezier(0.2, 0.64, 0.81, 0.23) 100ms infinite;
+            -moz-animation: move 2.5s cubic-bezier(0.2, 0.64, 0.81, 0.23) 100ms infinite;
+            -ms-animation: move 2.5s cubic-bezier(0.2, 0.64, 0.81, 0.23) 100ms infinite;
+            -o-animation: move 2.5s cubic-bezier(0.2, 0.64, 0.81, 0.23) 100ms infinite;
+            animation: move 2.5s cubic-bezier(0.2, 0.64, 0.81, 0.23) 100ms infinite;
         }
 
         span:nth-child(3) {
-            -webkit-animation: move 2.5s 200ms infinite cubic-bezier(0.2, 0.64, 0.81, 0.23);
-            -moz-animation: move 2.5s 200ms infinite cubic-bezier(0.2, 0.64, 0.81, 0.23);
-            -ms-animation: move 2.5s 200ms infinite cubic-bezier(0.2, 0.64, 0.81, 0.23);
-            -o-animation: move 2.5s 200ms infinite cubic-bezier(0.2, 0.64, 0.81, 0.23);
-            animation: move 2.5s 200ms infinite cubic-bezier(0.2, 0.64, 0.81, 0.23);
+            -webkit-animation: move 2.5s cubic-bezier(0.2, 0.64, 0.81, 0.23) 200ms infinite;
+            -moz-animation: move 2.5s cubic-bezier(0.2, 0.64, 0.81, 0.23) 200ms infinite;
+            -ms-animation: move 2.5s cubic-bezier(0.2, 0.64, 0.81, 0.23) 200ms infinite;
+            -o-animation: move 2.5s cubic-bezier(0.2, 0.64, 0.81, 0.23) 200ms infinite;
+            animation: move 2.5s cubic-bezier(0.2, 0.64, 0.81, 0.23) 200ms infinite;
         }
 
         span:nth-child(4) {
-            -webkit-animation: move 2.5s 300ms infinite cubic-bezier(0.2, 0.64, 0.81, 0.23);
-            -moz-animation: move 2.5s 300ms infinite cubic-bezier(0.2, 0.64, 0.81, 0.23);
-            -ms-animation: move 2.5s 300ms infinite cubic-bezier(0.2, 0.64, 0.81, 0.23);
-            -o-animation: move 2.5s 300ms infinite cubic-bezier(0.2, 0.64, 0.81, 0.23);
-            animation: move 2.5s 300ms infinite cubic-bezier(0.2, 0.64, 0.81, 0.23);
+            -webkit-animation: move 2.5s cubic-bezier(0.2, 0.64, 0.81, 0.23) 300ms infinite;
+            -moz-animation: move 2.5s cubic-bezier(0.2, 0.64, 0.81, 0.23) 300ms infinite;
+            -ms-animation: move 2.5s cubic-bezier(0.2, 0.64, 0.81, 0.23) 300ms infinite;
+            -o-animation: move 2.5s cubic-bezier(0.2, 0.64, 0.81, 0.23) 300ms infinite;
+            animation: move 2.5s cubic-bezier(0.2, 0.64, 0.81, 0.23) 300ms infinite;
         }
 
         span:nth-child(5) {
-            -webkit-animation: move 2.5s 400ms infinite cubic-bezier(0.2, 0.64, 0.81, 0.23);
-            -moz-animation: move 2.5s 400ms infinite cubic-bezier(0.2, 0.64, 0.81, 0.23);
-            -ms-animation: move 2.5s 400ms infinite cubic-bezier(0.2, 0.64, 0.81, 0.23);
-            -o-animation: move 2.5s 400ms infinite cubic-bezier(0.2, 0.64, 0.81, 0.23);
-            animation: move 2.5s 400ms infinite cubic-bezier(0.2, 0.64, 0.81, 0.23);
+            -webkit-animation: move 2.5s cubic-bezier(0.2, 0.64, 0.81, 0.23) 400ms infinite;
+            -moz-animation: move 2.5s cubic-bezier(0.2, 0.64, 0.81, 0.23) 400ms infinite;
+            -ms-animation: move 2.5s cubic-bezier(0.2, 0.64, 0.81, 0.23) 400ms infinite;
+            -o-animation: move 2.5s cubic-bezier(0.2, 0.64, 0.81, 0.23) 400ms infinite;
+            animation: move 2.5s cubic-bezier(0.2, 0.64, 0.81, 0.23) 400ms infinite;
         }
     }
     
@@ -84,7 +85,11 @@
         background-color: transparent;
     }
 
-    25%,75% {
+    25% {
+        background-color: $Accent;
+    }
+
+    75% {
         background-color: $Accent;
     }
 
@@ -99,7 +104,11 @@
         background-color: transparent;
     }
 
-    25%,75% {
+    25% {
+        background-color: $Accent;
+    }
+
+    75% {
         background-color: $Accent;
     }
 
@@ -114,7 +123,11 @@
         background-color: transparent;
     }
 
-    25%,75% {
+    25% {
+        background-color: $Accent;
+    }
+
+    75% {
         background-color: $Accent;
     }
 
@@ -129,7 +142,11 @@
         background-color: transparent;
     }
 
-    25%,75% {
+    25% {
+        background-color: $Accent;
+    }
+
+    75% {
         background-color: $Accent;
     }
 
@@ -144,12 +161,16 @@
         background-color: transparent;
     }
 
-    25%,75% {
+    25% {
+        background-color: $Accent;
+    }
+
+    75% {
         background-color: $Accent;
     }
 
     100% {
-        left: calc(100% + 4px);
+        left: 100%;
         background-color: transparent;
     }
 }

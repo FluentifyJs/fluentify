@@ -8,32 +8,38 @@
     font-weight: 200;
     src: local("Segoe UI Light");
 }
+
 @font-face {
     font-family: "Segoe UI";
     font-weight: 300;
     src: local("Segoe UI Semilight"), local("Segoe UI");
 }
+
 @font-face {
     font-family: "Segoe UI";
     font-weight: 400;
     src: local("Segoe UI");
 }
+
 @font-face {
     font-family: "Segoe UI";
     font-weight: 600;
     src: local("Segoe UI Semibold");
 }
+
 @font-face {
     font-family: "Segoe UI";
     font-weight: 700;
     src: local("Segoe UI Bold");
 }
+
 @font-face {
     font-family: "Segoe UI";
     font-style: italic;
     font-weight: 400;
     src: local("Segoe UI Italic");
 }
+
 @font-face {
     font-family: "Segoe UI";
     font-style: italic;
@@ -63,27 +69,33 @@ body {
     font-size: 46px;
     font-weight: 200;
 }
+
 .subheader {
     font-size: 34px;
     font-weight: 200;
 }
+
 .title {
     font-size: 24px;
     font-weight: 300;
 }
+
 .subtitle {
     font-size: 20px;
     font-weight: 400;
 }
+
 .subtitlealt {
     font-size: 18px;
     font-weight: 400;
 }
+
 .captionalt {
     font-size: 13px;
     font-weight: 400;
     letter-spacing: 0.4em;
 }
+
 .caption {
     font-size: 12px;
     font-weight: 400;
@@ -98,15 +110,19 @@ body {
 .font-weight-light {
     font-weight: 200;
 }
+
 .font-weight-semilight {
     font-weight: 300;
 }
+
 .font-weight-regular {
     font-weight: 400;
 }
+
 .font-weight-semibold {
     font-weight: 600;
 }
+
 .font-weight-bold {
     font-weight: 700;
 }
@@ -119,9 +135,11 @@ body {
 .font-style-italic {
     font-style: italic;
 }
+
 .font-style-oblique {
     font-style: oblique;
 }
+
 .font-style-normal {
     font-style: normal;
 }
