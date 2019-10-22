@@ -3,13 +3,13 @@
     <div class="f-switch--control">
       <input
         ref="switch"
+        v-model="checked"
         role="switch"
         type="checkbox"
         :value="value"
         :disabled="disabled"
         v-bind="$attrs"
         v-on="inputListeners"
-        v-model="checked"
       >
       <div class="f-switch--input">
         <span class="f-switch--thumb" />
@@ -32,7 +32,10 @@ export default {
     event: 'input'
   },
   props: {
-    checked: [String, Number, Boolean, Array],
+    checked: {
+      type: [String, Number, Boolean, Array],
+      default: null
+    },
     value: {
       type: [String, Number, Boolean, Array],
       default: null
@@ -77,7 +80,6 @@ export default {
   },
   watch: {},
   mounted () {
-    console.log(this)
   },
   methods: {
     toggleState () {

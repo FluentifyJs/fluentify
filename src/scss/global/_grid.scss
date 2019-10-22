@@ -1,31 +1,37 @@
 [grid-flow*="row"] {
-  grid-auto-flow: row;
-  &[grid-flow*="dense"] {
-    grid-auto-flow: row dense;
-  }
+    grid-auto-flow: row;
+
+    &[grid-flow*="dense"] {
+        grid-auto-flow: row dense;
+    }
 }
+
 [grid-flow*="column"] {
-  grid-auto-flow: column;
-  [grid-flow*="dense"] {
-    grid-auto-flow: column dense;
-  }
+    grid-auto-flow: column;
+
+    [grid-flow*="dense"] {
+        grid-auto-flow: column dense;
+    }
 }
 
 @each $breakpoint in map-keys($grid-breakpoints) {
-  @include media-breakpoint-up($breakpoint, $grid-breakpoints) {
-    @for $i from 1 through $grid-columns {
-      [column-start*="#{$breakpoint}-#{$i}"] {
-        grid-column-start: #{$i};
-      }
-      [column-end*="#{$breakpoint}-#{$i}"] {
-        grid-column-end: #{$i+1};
-      }
-      [row-start*="#{$breakpoint}-#{$i}"] {
-        grid-row-start: #{$i};
-      }
-      [row-end*="#{$breakpoint}-#{$i}"] {
-        grid-row-end: #{$i};
-      }
+    @include media-breakpoint-up($breakpoint, $grid-breakpoints) {
+        @for $i from 1 through $grid-columns {
+            [column-start*="#{$breakpoint}-#{$i}"] {
+                grid-column-start: #{$i};
+            }
+
+            [column-end*="#{$breakpoint}-#{$i}"] {
+                grid-column-end: #{$i+1};
+            }
+
+            [row-start*="#{$breakpoint}-#{$i}"] {
+                grid-row-start: #{$i};
+            }
+
+            [row-end*="#{$breakpoint}-#{$i}"] {
+                grid-row-end: #{$i};
+            }
+        }
     }
-  }
 }

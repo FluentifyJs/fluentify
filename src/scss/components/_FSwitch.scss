@@ -15,7 +15,7 @@ $ThumbMargin: 3px;
     .f-switch--control {
         position: relative;
         display: inline-block;
-    
+
         input {
             position: absolute;
             width: 100%;
@@ -23,8 +23,8 @@ $ThumbMargin: 3px;
             opacity: 0;
             cursor: pointer;
             z-index: 1;
-    
-            &+ .f-switch--input {
+
+            &+.f-switch--input {
                 border: 2px solid $BaseHigh;
                 background-color: $ChromeWhite;
                 height: 20px;
@@ -35,6 +35,7 @@ $ThumbMargin: 3px;
                 transition: all 0.2s ease-in-out;
                 border-radius: 10px;
                 position: relative;
+
                 .f-switch--thumb {
                     border-radius: 100%;
                     display: inline-block;
@@ -45,18 +46,16 @@ $ThumbMargin: 3px;
                     transition: all 0.2s ease-in-out;
                 }
             }
-    
+
             &:checked {
-                &+ .f-switch--input {
+                &+.f-switch--input {
                     border-color: $Accent;
                     background-color: $Accent;
                     color: $ChromeWhite;
 
                     .f-switch--thumb {
                         background-color: $ChromeWhite;
-                        transform: translateX(
-                            $Width - $ThumbWidth - ($ThumbMargin * 2) - ($Border * 2)
-                        );
+                        transform: translateX($Width - $ThumbWidth - ($ThumbMargin * 2) - ($Border * 2));
                     }
                 }
             }
@@ -64,8 +63,9 @@ $ThumbMargin: 3px;
             &:focus {
                 outline: none;
             }
+
             &:active {
-                &+ .f-switch--input {
+                &+.f-switch--input {
                     border-color: transparent;
                     background-color: $BaseMedium;
                     color: $BaseMedium;
@@ -75,19 +75,20 @@ $ThumbMargin: 3px;
                         background-color: $ChromeWhite;
                         transition: all 0.05s ease-in-out;
                     }
-   
-                    &:before, &:after {
+
+                    &:before,
+                    &:after {
                         background-color: $BaseMedium;
                     }
-   
-                    &+ label {
+
+                    &+label {
                         color: $BaseMedium;
                     }
                 }
             }
-   
+
             &:disabled {
-                &+ .f-switch--input {
+                &+.f-switch--input {
                     border-color: $BaseMediumLow;
                     background-color: $ChromeWhite;
                     color: $BaseMediumLow;
@@ -95,19 +96,22 @@ $ThumbMargin: 3px;
                     .f-switch--thumb {
                         background-color: $BaseMediumLow;
                     }
-   
-                    &:before, &:after {
+
+                    &:before,
+                    &:after {
                         background-color: $BaseMediumLow;
                     }
-   
-                    &+ label {
+
+                    &+label {
                         color: $BaseMediumLow;
                     }
                 }
+
                 &:checked {
-                    &+ .f-switch--input {
+                    &+.f-switch--input {
                         border-color: transparent;
                         background-color: $BaseLow;
+
                         .f-switch--thumb {
                             background-color: $BaseLow;
                         }
@@ -115,17 +119,17 @@ $ThumbMargin: 3px;
                 }
             }
         }
-   
-        &+ label {
+
+        &+label {
             color: $BaseHigh;
             display: inline-block;
             cursor: pointer;
             font-size: 15px;
             vertical-align: top;
         }
-   
+
         &:disabled {
-            &+ label {
+            &+label {
                 color: $BaseMediumLow;
             }
         }
