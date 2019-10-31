@@ -1,7 +1,7 @@
 {
-  "name": "fluentify",
-  "version": "0.0.1",
-  "description": "Fluent design components based framework for Vue.js",
+  "name": "@fluentify/fluentify",
+  "version": "0.1.0",
+  "description": "Fluent design system components based framework for Vue.js",
   "author": "Alexander Wennerstrøm <alexanderw0310@gmail.com>",
   "scripts": {
     "build": "vue-cli-service build",
@@ -47,7 +47,7 @@
   ],
   "browser": "dist/fluentify.js",
   "bugs": {
-    "url": "https://github.com/AlexanderYW/fluentify/issues"
+    "url": "https://github.com/FluentifyJs/fluentify/issues"
   },
   "dllPlugin": {
     "name": "vuePluginTemplateDeps",
@@ -86,7 +86,7 @@
     "/dist/",
     "/src/"
   ],
-  "homepage": "https://github.com/AlexanderYW/fluentify#readme",
+  "homepage": "https://github.com/FluentifyJs/fluentify#readme",
   "keywords": [
     "vue",
     "vuejs",
@@ -110,7 +110,7 @@
   "pre-commit": "lint:staged",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/AlexanderYW/fluentify.git"
+    "url": "git+https://github.com/FluentifyJs/fluentify.git"
   },
   "style": "dist/fluentify.css",
   "unpkg": "dist/fluentify.js",
