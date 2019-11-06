@@ -1,45 +1,82 @@
 <template>
-  <div
-    ref="dropdownMenu"
-    class="f-menu"
+  <RouterLink
+    v-if="to"
+    ref="card"
+    class="f-card"
+    :class="[`f-card-layout-${layout}`]"
   >
-    <div
-      ref="activator"
-      class="f-menu-activator"
-      :aria-expanded="!!(!disabled && isActive) ? 'true': 'false'"
-      @click="openMenu"
-    >
-      <slot name="activator" />
-    </div>
-    <div
-      v-show="!disabled && isActive"
-      class="f-menu-content"
-    >
-      <slot />
-    </div>
+    <slot />
+  </RouterLink>
+  <a
+    v-else-if="hasClickListener"
+    ref="card"
+    class="f-card"
+    :class="[`f-card-layout-${layout}`]"
+    @click="$emit('click')"
+  >
+    <slot />
+  </a>
+  <a
+    v-else-if="href"
+    ref="card"
+    class="f-card"
+    :class="[`f-card-layout-${layout}`]"
+    :href="href"
+  >
+    <slot />
+  </a>
+  <div
+    v-else
+    ref="card"
+    class="f-card"
+    :class="[`f-card-layout-${layout}`]"
+  >
+    <slot />
   </div>
 </template>
 
 <script>
 export default {
-  name: 'FMenu',
+  name: 'FCard',
   props: {
-    disabled: Boolean
+    to: {
+      type: [String, Object, Function],
+      default: null
+    },
+    href: {
+      type: String,
+      default: null
+    },
+    layout: {
+      type: String,
+      default: 'default'
+    }
   },
   data () {
     return {
+      active: false
     }
   },
-  computed: {},
-  watch: {},
+  computed: {
+    hasClickListener(){
+      return this.$listeners && this.$listeners.click
+    }
+  },
+  watch: {
+    '$route': 'onRouteChange'
+  },
   mounted () {
   },
   created () {
   },
-
   beforeDestroy () {
   },
   methods: {
+    onRouteChange () {
+      if (!this.to || !this.$refs.link) return
+
+      this.active = true
+    }
   }
 }
 </script>
