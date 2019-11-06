@@ -1,4 +1,10 @@
 import FCard from './FCard'
+import FCardAction from './FCardAction'
+import FCardCaption from './FCardCaption'
+import FCardImage from './FCardImage'
+import FCardText from './FCardText'
+import FCardTitle from './FCardTitle'
+import FCardContent from './FCardContent'
 
 import { use, registerComponent } from '../../utils/helper'
 
@@ -13,5 +19,11 @@ use(Plugin)
 export default Plugin
 
 export {
-  FCard
+  FCard,
+  FCardAction,
+  FCardCaption,
+  FCardImage,
+  FCardText,
+  FCardTitle,
+  FCardContent
 }
