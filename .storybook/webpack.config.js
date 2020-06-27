@@ -13,10 +13,7 @@ module.exports = {
             loader: "css-loader"
           },
           {
-            loader: "sass-loader",
-            options: {
-              javascriptEnabled: true
-            }
+            loader: "sass-loader"
           }
         ],
         include: path.resolve(__dirname, "../")
