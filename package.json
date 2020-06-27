@@ -32,7 +32,7 @@
     "babel-preset-vue": "^2.0.2",
     "chai": "^4.2.0",
     "eslint": "^5.16.0",
-    "eslint-plugin-vue": "^5.2.3",
+    "eslint-plugin-vue": "^6.2.2",
     "file-loader": "^6.0.0",
     "lint-staged": "^10.2.11",
     "node-sass": "^4.14.1",
