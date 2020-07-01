@@ -19,7 +19,7 @@
     "storybook:serve": "start-storybook"
   },
   "devDependencies": {
-    "@babel/core": "^7.6.4",
+    "@babel/core": "^7.10.4",
     "@storybook/addon-actions": "^5.3.19",
     "@storybook/addon-links": "^5.3.19",
     "@storybook/vue": "^5.3.19",
