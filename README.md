@@ -4,6 +4,8 @@
 ![image](https://img.shields.io/npm/dm/@fluentify/fluentify.svg)
 ![image](https://img.shields.io/npm/v/@fluentify/fluentify.svg)
 ![image](https://img.shields.io/npm/l/@fluentify/fluentify.svg)
+[![image](https://github.com/FluentifyJs/fluentify/workflows/Javascript%20and%20css%20linting/badge.svg)](https://github.com/FluentifyJs/fluentify/actions?query=workflow%3A%22Javascript+and+css+linting%22)
+
 
 
 ## This Components framework is *Work in progress*, please keep that in mind that it's not ready for production yet, feel free to contribute and get it ready faster 
