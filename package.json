@@ -41,7 +41,7 @@
     "sass-loader": "^9.0.3",
     "stylelint": "^13.6.1",
     "vue-loader": "^15.9.3",
-    "vue-template-compiler": "^2.6.10"
+    "vue-template-compiler": "^2.6.12"
   },
   "browserslist": [
     "last 2 versions"
@@ -116,6 +116,6 @@
   "style": "dist/fluentify.css",
   "unpkg": "dist/fluentify.js",
   "dependencies": {
-    "vue": "^2.6.11"
+    "vue": "^2.6.12"
   }
 }
