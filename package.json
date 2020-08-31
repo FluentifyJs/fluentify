@@ -39,7 +39,7 @@
     "pre-commit": "^1.2.2",
     "rimraf": "^3.0.2",
     "sass-loader": "^9.0.3",
-    "stylelint": "^13.6.1",
+    "stylelint": "^13.7.0",
     "vue-loader": "^15.9.3",
     "vue-template-compiler": "^2.6.10"
   },
