@@ -1,8 +1,7 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import { configure, addParameters, addDecorator } from '@storybook/vue'
-import theme from './theme';
 
-import '../src/scss/fluentify.scss'
+// import '../src/scss/fluentify.scss'
 
 const req = require.context('../src/stories', true, /.stories.js$/)
 
