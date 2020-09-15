@@ -116,6 +116,7 @@
   "style": "dist/fluentify.css",
   "unpkg": "dist/fluentify.js",
   "dependencies": {
+    "@storybook/preset-scss": "^1.0.2",
     "vue": "^2.6.12"
   }
 }
