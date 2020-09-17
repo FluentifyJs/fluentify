@@ -5,7 +5,6 @@
   "author": "Alexander Wennerstrøm <alexanderw0310@gmail.com>",
   "scripts": {
     "build": "vue-cli-service build",
-    "serve": "vue-cli-service serve",
     "test": "cross-env BABEL_ENV=test karma start test/karma.conf.js --single-run",
     "clean": "rimraf dist",
     "coverage": "cross-env BABEL_ENV=test karma start test/karma.conf.js",
@@ -16,10 +15,14 @@
     "prepublish": "npm run build",
     "pretest": "npm run lint",
     "storybook:build": "build-storybook",
-    "storybook:serve": "start-storybook"
+    "storybook:serve": "start-storybook -p 9000"
+  },
+  "dependencies": {
+    "vue": "^2.6.12"
   },
   "devDependencies": {
     "@babel/core": "^7.11.6",
+    "@storybook/preset-scss": "^1.0.2",
     "@storybook/addon-actions": "^6.0.21",
     "@storybook/addon-links": "^6.0.21",
     "@storybook/vue": "^6.0.21",
@@ -50,43 +53,6 @@
   "bugs": {
     "url": "https://github.com/FluentifyJs/fluentify/issues"
   },
-  "dllPlugin": {
-    "name": "vuePluginTemplateDeps",
-    "include": [
-      "mocha/mocha.js",
-      "!!style-loader!!css-loader!mocha-css",
-      "html-entities",
-      "vue/dist/vue.js",
-      "chai",
-      "core-js/library",
-      "url",
-      "sockjs-client",
-      "vue-style-loader/lib/addStylesClient.js",
-      "events",
-      "ansi-html",
-      "style-loader/lib/addStyles.js"
-    ],
-    "loaders": [
-      "style-loader",
-      {
-        "loader": "css-loader",
-        "options": {
-          "importLoaders": 1
-        }
-      },
-      {
-        "loader": "sass-loader",
-        "options": {
-          "importLoaders": 1
-        }
-      }
-    ]
-  },
-  "files": [
-    "/build/",
-    "/dist/",
-    "/src/"
-  ],
   "homepage": "https://github.com/FluentifyJs/fluentify#readme",
   "keywords": [
     "vue",
@@ -114,9 +80,5 @@
     "url": "git+https://github.com/FluentifyJs/fluentify.git"
   },
   "style": "dist/fluentify.css",
-  "unpkg": "dist/fluentify.js",
-  "dependencies": {
-    "@storybook/preset-scss": "^1.0.2",
-    "vue": "^2.6.12"
-  }
+  "unpkg": "dist/fluentify.js"
 }
