@@ -1,6 +1,6 @@
 {
   "name": "@fluentify/fluentify",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Fluent design system components based framework for Vue.js",
   "author": "Alexander Wennerstrøm <alexanderw0310@gmail.com>",
   "scripts": {
