@@ -5,7 +5,7 @@
   "author": "Alexander Wennerstrøm <alexanderw0310@gmail.com>",
   "scripts": {
     "build": "vue-cli-service build",
-    "test": "cross-env BABEL_ENV=test karma start test/karma.conf.js --single-run",
+    "test": "npm run coverage",
     "clean": "rimraf dist",
     "coverage": "vue-cli-service test:unit",
     "lint": "npm run lint:css && npm run lint:js && vue-cli-service lint",
