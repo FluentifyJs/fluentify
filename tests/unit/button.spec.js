@@ -3,7 +3,7 @@ import { shallowMount } from '@vue/test-utils'
 import FBtn from '@/components/FBtn/FBtn.vue'
 
 describe('FBtn.vue', () => {
-  it('renders props.label when passed', () => {
+  it('renders label in default slot when passed', () => {
     const label = 'new message'
     const wrapper = shallowMount(FBtn, {
       // propsData: { label }
