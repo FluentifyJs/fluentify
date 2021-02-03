@@ -22,7 +22,7 @@
     "vue": "^2.6.12"
   },
   "devDependencies": {
-    "@babel/core": "^7.12.10",
+    "@babel/core": "^7.12.13",
     "@storybook/preset-scss": "^1.0.3",
     "@storybook/addon-actions": "^6.1.16",
     "@storybook/addon-links": "^6.1.15",
