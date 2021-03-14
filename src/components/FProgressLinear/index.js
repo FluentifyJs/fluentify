@@ -1,4 +1,4 @@
-import FProgressLinear from './FProgressLinear'
+import FProgressLinear from './FProgressLinear.vue'
 
 import { use, registerComponent } from '../../utils/helper'
 

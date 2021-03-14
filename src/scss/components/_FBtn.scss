@@ -19,6 +19,8 @@
     outline: 1px solid transparent;
     outline-offset: -3px;
     vertical-align: middle;
+    cursor: pointer;
+    user-select: none;
 
     &:active {
         -ms-transform: scale(.98);
@@ -57,7 +59,7 @@
         }
     }
 
-    &.f-btn-primary {
+    &.f-btn--primary {
         background: $Accent;
         color: $ChromeWhite;
 
@@ -70,7 +72,7 @@
         }
     }
 
-    &.f-btn-secondary {
+    &.f-btn--secondary {
         background: $Secondary;
         color: $ChromeWhite;
 
@@ -85,6 +87,12 @@
 
     &.f-btn--flat {
         background-color: transparent;
+    }
+
+    &.f-btn--block {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
     }
 }
 

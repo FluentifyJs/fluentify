@@ -1,4 +1,4 @@
-import FRadio from './FRadio'
+import FRadio from './FRadio.vue'
 
 import { use, registerComponent } from '../../utils/helper'
 

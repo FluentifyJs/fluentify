@@ -1,4 +1,4 @@
-import FRadioGroup from './FRadioGroup'
+import FRadioGroup from './FRadioGroup.vue'
 
 import { use, registerComponent } from '../../utils/helper'
 

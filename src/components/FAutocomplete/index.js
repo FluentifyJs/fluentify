@@ -1,4 +1,4 @@
-import FAutocomplete from './FAutocomplete'
+import FAutocomplete from './FAutocomplete.vue'
 
 import { use, registerComponent } from '../../utils/helper'
 

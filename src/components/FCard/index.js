@@ -1,10 +1,10 @@
-import FCard from './FCard'
-import FCardAction from './FCardAction'
-import FCardCaption from './FCardCaption'
-import FCardImage from './FCardImage'
-import FCardText from './FCardText'
-import FCardTitle from './FCardTitle'
-import FCardContent from './FCardContent'
+import FCard from './FCard.vue'
+import FCardAction from './FCardAction.vue'
+import FCardCaption from './FCardCaption.vue'
+import FCardImage from './FCardImage.vue'
+import FCardText from './FCardText.vue'
+import FCardTitle from './FCardTitle.vue'
+import FCardContent from './FCardContent.vue'
 
 import { use, registerComponent } from '../../utils/helper'
 

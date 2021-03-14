@@ -1,4 +1,4 @@
-import FImg from './FImg'
+import FImg from './FImg.vue'
 
 import {
   use,

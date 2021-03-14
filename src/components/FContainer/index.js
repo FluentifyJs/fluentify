@@ -1,4 +1,4 @@
-import FContainer from './FContainer'
+import FContainer from './FContainer.vue'
 
 import { use, registerComponent } from '../../utils/helper'
 

@@ -1,16 +1,9 @@
-/* eslint-disable import/no-extraneous-dependencies */
-import { configure, addDecorator } from '@storybook/vue'
 
-import '!style-loader!css-loader!sass-loader!../src/scss/fluentify.scss'
+import { app } from "@storybook/vue3";
 
-const req = require.context('../src/stories', true, /.stories.js$/)
+// import '!style-loader!css-loader!sass-loader!../src/scss/fluentify.scss'
+import '../src/scss/fluentify.scss'
 
-addDecorator(() => ({
-  template: '<div style="padding:20px;"><story/></div>',
-}))
-
-function loadStories() {
-  req.keys().forEach(filename => req(filename))
+export const parameters = {
+  actions: { argTypesRegex: "^on[A-Z].*" },
 }
-
-configure(loadStories, module)

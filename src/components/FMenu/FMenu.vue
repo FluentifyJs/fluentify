@@ -58,7 +58,7 @@ export default {
   },
   methods: {
     openMenu () {
-      this.$set(this, 'isActive', !this.isActive)
+      this.isActive = !this.isActive
     },
     isInWhiteList (el) {
       if (el === this.$refs.dropdownMenu) return true

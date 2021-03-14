@@ -2,10 +2,10 @@
   <div class="f-checkbox">
     <div class="f-checkbox--selection">
       <input
-        v-model="value"
+        v-model="computedValue"
         type="checkbox"
         :disabled="disabled ? true: false"
-        :indeterminate.prop="indeterminate ? true: false"
+        :indeterminate.prop="computedIndeterminate ? true: false"
       >
       <span @click="toggleState" />
     </div>
@@ -21,8 +21,9 @@
 <script>
 export default {
   name: 'FCheckbox',
+  emits: ['update:modelValue', 'update:indeterminate'],
   props: {
-    value: {
+    modelValue: {
       type: [String, Number, Boolean],
       default: null
     },
@@ -42,14 +43,26 @@ export default {
   data () {
     return {}
   },
-  computed: {},
+  computed: {
+    computedValue: {
+      get() {
+        return this.modelValue
+      },
+      set(value) {
+        this.$emit('update:modelValue', value)
+      }
+    },
+    computedIndeterminate() {
+      return this.indeterminate
+    }
+  },
   watch: {},
   mounted () {},
   methods: {
     toggleState () {
       if (this.disabled !== true) {
-        this.$set(this, 'indeterminate', false)
-        this.$set(this, 'value', !this.value)
+        this.$emit('update:indeterminate', false)
+        this.$emit('update:modelValue', !this.modelValue)
       }
     }
   }

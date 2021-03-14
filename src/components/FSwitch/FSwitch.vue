@@ -3,13 +3,13 @@
     <div class="f-switch--control">
       <input
         ref="switch"
-        v-model="checked"
         role="switch"
         type="checkbox"
-        :value="value"
         :disabled="disabled"
+        v-model="modelValue"
+        :value="value"
+        @input="input"
         v-bind="$attrs"
-        v-on="inputListeners"
       >
       <div class="f-switch--input">
         <span class="f-switch--thumb" />
@@ -27,12 +27,9 @@
 <script>
 export default {
   name: 'FSwitch',
-  model: {
-    prop: 'checked',
-    event: 'input'
-  },
+  emits: ['update:modelValue'],
   props: {
-    checked: {
+    modelValue: {
       type: [String, Number, Boolean, Array],
       default: null
     },
@@ -52,32 +49,7 @@ export default {
   data () {
     return {}
   },
-  computed: {
-    inputListeners: function () {
-      var vm = this
-      // `Object.assign` merges objects together to form a new object
-      return Object.assign({},
-        // We add all the listeners from the parent
-        this.$listeners,
-        // Then we can add custom listeners or override the
-        // behavior of some listeners.
-        {
-          // This ensures that the component works with v-model
-          input: function (event) {
-            if (Array.isArray(vm.checked)) {
-              if(vm.checked.includes(vm.value) && !event.target.checked){
-                vm.checked.splice(vm.checked.indexOf(vm.value), 1)
-              } else if (!vm.checked.includes(vm.value)) {
-                vm.checked.push(vm.value)
-              }
-            } else {
-              vm.$emit('input', !vm.checked)
-            }
-          }
-        }
-      )
-    }
-  },
+  computed: {},
   watch: {},
   mounted () {
   },
@@ -85,6 +57,17 @@ export default {
     toggleState () {
       if (this.disabled !== true) {
         this.$refs.switch.click()
+      }
+    },
+    input (event) {
+      if (Array.isArray(this.modelValue)) {
+        if(this.modelValue.includes(this.value) && !event.target.checked){
+          this.modelValue.splice(this.modelValue.indexOf(this.value), 1)
+        } else if (!this.modelValue.includes(this.value)) {
+          this.modelValue.push(this.value)
+        }
+      } else {
+        this.$emit('update:modelValue', !this.checked)
       }
     }
   }

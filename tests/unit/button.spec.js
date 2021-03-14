@@ -1,6 +1,6 @@
 import { expect } from 'chai'
 import { shallowMount } from '@vue/test-utils'
-import FBtn from '@/components/FBtn/FBtn.vue'
+import FBtn from '../../src/components/FBtn/FBtn.vue'
 
 describe('FBtn.vue', () => {
   it('renders label in default slot when passed', () => {

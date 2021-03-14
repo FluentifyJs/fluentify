@@ -4,55 +4,45 @@
   "description": "Fluent design system components based framework for Vue.js",
   "author": "Alexander Wennerstrøm <alexanderw0310@gmail.com>",
   "scripts": {
-    "build": "vue-cli-service build",
+    "build": "vite build",
+    "dev": "vite dev",
     "test": "npm run coverage",
     "clean": "rimraf dist",
-    "coverage": "vue-cli-service test:unit",
-    "lint": "npm run lint:css && npm run lint:js && vue-cli-service lint",
-    "lint:css": "stylelint src/**/*.{vue,css,scss}",
-    "lint:js": "npx eslint --ext js --ext jsx --ext vue src src/**/*.spec.js",
-    "lint:js:fix": "npm run lint:js -- --fix",
-    "lint:staged": "lint-staged",
+    "clean-modules": "rimraf node_modules",
+    "coverage": "vite --config vite.config.test.js",
     "prepublish": "npm run build",
-    "pretest": "npm run lint",
-    "storybook:build": "build-storybook",
-    "storybook:serve": "start-storybook -p 9000"
+    "storybook": "start-storybook -p 6006",
+    "storybook:build": "build-storybook"
   },
   "dependencies": {
-    "vue": "^2.6.12"
+    "vue": "^3.0.7"
   },
   "devDependencies": {
-    "@babel/core": "^7.13.8",
-    "@storybook/preset-scss": "^1.0.3",
-    "@storybook/addon-actions": "^6.1.20",
-    "@storybook/addon-links": "^6.1.20",
-    "@storybook/vue": "^6.1.20",
-    "@vue/cli-plugin-babel": "^4.5.11",
-    "@vue/cli-plugin-eslint": "^4.5.11",
-    "@vue/cli-plugin-unit-mocha": "~4.5.11",
-    "@vue/cli-service": "^4.5.11",
-    "@vue/eslint-config-standard": "^4.0.0",
-    "@vue/test-utils": "^1.1.3",
-    "babel-eslint": "^10.1.0",
+    "@babel/core": "^7.12.16",
+    "@storybook/addon-actions": "^6.2.0-beta.8",
+    "@storybook/addon-essentials": "^6.2.0-beta.8",
+    "@storybook/addon-links": "^6.2.0-beta.8",
+    "@storybook/addon-postcss": "^2.0.0",
+    "@storybook/vue3": "^6.2.0-beta.8",
+    "@vitejs/plugin-vue": "^1.1.5",
+    "@vue/compiler-sfc": "^3.0.7",
+    "autoprefixer": "^10.2.4",
     "babel-loader": "^8.2.2",
-    "babel-preset-vue": "^2.0.2",
     "chai": "^4.3.0",
-    "eslint": "^6.8.0",
-    "eslint-plugin-vue": "^6.2.2",
-    "file-loader": "^6.2.0",
-    "lint-staged": "^10.5.4",
-    "node-sass": "^5.0.0",
-    "pre-commit": "^1.2.2",
+    "css-loader": "^5.1.1",
+    "postcss": "^8.2.6",
+    "puppeteer": "^7.1.0",
     "rimraf": "^3.0.2",
     "sass": "^1.32.8",
     "sass-loader": "^10.1.1",
-    "stylelint": "^13.11.0",
-    "vue-template-compiler": "^2.6.12"
+    "style-loader": "^2.0.0",
+    "vite": "^2.0.5",
+    "vue-loader": "^16.1.2"
   },
   "browserslist": [
     "last 2 versions"
   ],
-  "browser": "dist/fluentify.js",
+  "browser": "dist/fluentify.umd.js",
   "bugs": {
     "url": "https://github.com/FluentifyJs/fluentify/issues"
   },
@@ -66,22 +56,12 @@
     "components"
   ],
   "license": "MIT",
-  "lint-staged": {
-    "*.{vue,jsx,js}": [
-      "npm run lint:js"
-    ],
-    "*.{vue,css}": [
-      "npx stylefmt",
-      "npm run lint:css"
-    ]
-  },
-  "main": "dist/fluentify.common.js",
-  "module": "dist/fluentify.esm.js",
-  "pre-commit": "lint:staged",
+  "main": "dist/fluentify.umd.js",
+  "module": "dist/fluentify.es.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/FluentifyJs/fluentify.git"
   },
   "style": "dist/fluentify.css",
-  "unpkg": "dist/fluentify.js"
+  "unpkg": "dist/fluentify.umd.js"
 }

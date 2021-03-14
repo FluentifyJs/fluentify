@@ -1,4 +1,4 @@
-import FCheckbox from './FCheckbox'
+import FCheckbox from './FCheckbox.vue'
 
 import { use, registerComponent } from '../../utils/helper'
 

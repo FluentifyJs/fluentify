@@ -1,4 +1,4 @@
-import FSelect from './FSelect'
+import FSelect from './FSelect.vue'
 
 import { use, registerComponent } from '../../utils/helper'
 

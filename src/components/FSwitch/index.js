@@ -1,4 +1,4 @@
-import FSwitch from './FSwitch'
+import FSwitch from './FSwitch.vue'
 
 import { use, registerComponent } from '../../utils/helper'
 

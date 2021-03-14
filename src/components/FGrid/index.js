@@ -1,5 +1,5 @@
-import FGrid from './FGrid'
-import FGridItem from './FGridItem'
+import FGrid from './FGrid.vue'
+import FGridItem from './FGridItem.vue'
 
 import { use, registerComponent } from '../../utils/helper'
 

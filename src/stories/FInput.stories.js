@@ -1,4 +1,4 @@
-import { storiesOf } from '@storybook/vue'
+import { storiesOf } from '@storybook/vue3'
 
 // import * as components from '../components'
 import FInput from '../components/FInput/FInput.vue'

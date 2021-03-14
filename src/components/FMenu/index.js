@@ -1,4 +1,4 @@
-import FMenu from './FMenu'
+import FMenu from './FMenu.vue'
 
 import { use, registerComponent } from '../../utils/helper'
 

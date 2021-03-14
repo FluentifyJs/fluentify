@@ -89,7 +89,7 @@ export default {
       this.$emit('input', value)
     },
     value (value) {
-      this.$set(this, 'tempValue', value)
+      this.tempValue = value
       if (value !== null) {
         this.findSelectedValue()
         this.findPercentageOfValue()

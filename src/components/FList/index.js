@@ -1,7 +1,7 @@
-import FList from './FList'
-import FListItem from './FListItem'
-import FListItemAvatar from './FListItemAvatar'
-import FListItemContent from './FListItemContent'
+import FList from './FList.vue'
+import FListItem from './FListItem.vue'
+import FListItemAvatar from './FListItemAvatar.vue'
+import FListItemContent from './FListItemContent.vue'
 
 import { use, registerComponent } from '../../utils/helper'
 

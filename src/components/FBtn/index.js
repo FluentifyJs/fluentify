@@ -1,4 +1,4 @@
-import FBtn from './FBtn'
+import FBtn from './FBtn.vue'
 
 import { use, registerComponent } from '../../utils/helper'
 

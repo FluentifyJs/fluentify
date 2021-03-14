@@ -1,4 +1,4 @@
-import FAvatar from './FAvatar'
+import FAvatar from './FAvatar.vue'
 
 import { use, registerComponent } from '../../utils/helper'
 

@@ -78,7 +78,7 @@ export default {
       set (value) {
         this.$emit('change', value)
         if (this.obj !== null) {
-          this.$set(this.obj, 'selected', value)
+          this.obj.selected = value
         }
       }
     }

@@ -1,4 +1,4 @@
-import FInput from './FInput'
+import FInput from './FInput.vue'
 
 import { use, registerComponent } from '../../utils/helper'
 

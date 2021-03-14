@@ -7,13 +7,13 @@
       {{ label }}
     </span>
     <input
-      :value="value"
+      :value="modelValue"
+      @input="$emit('update:modelValue', $event.target.value)"
       :type="type"
       :required="required"
       :name="name"
       :disabled="disabled"
       v-bind="$attrs"
-      v-on="inputListeners"
     >
   </label>
 </template>
@@ -21,8 +21,9 @@
 <script>
 export default {
   name: 'FInput',
+  emits: ['update:modelValue'],
   props: {
-    value: {
+    modelValue: {
       type: [String, Number],
       default: null
     },
@@ -53,24 +54,6 @@ export default {
   },
   data () {
     return {}
-  },
-  computed: {
-    inputListeners: function () {
-      var vm = this
-      // `Object.assign` merges objects together to form a new object
-      return Object.assign({},
-        // We add all the listeners from the parent
-        this.$listeners,
-        // Then we can add custom listeners or override the
-        // behavior of some listeners.
-        {
-          // This ensures that the component works with v-model
-          input: function (event) {
-            vm.$emit('input', event.target.value)
-          }
-        }
-      )
-    }
   },
   watch: {},
   mounted () {},

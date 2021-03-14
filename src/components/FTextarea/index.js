@@ -1,4 +1,4 @@
-import FTextarea from './FTextarea'
+import FTextarea from './FTextarea.vue'
 
 import { use, registerComponent } from '../../utils/helper'
 

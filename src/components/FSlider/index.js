@@ -1,4 +1,4 @@
-import FSlider from './FSlider'
+import FSlider from './FSlider.vue'
 
 import { use, registerComponent } from '../../utils/helper'
 
