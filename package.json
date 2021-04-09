@@ -25,7 +25,7 @@
     "@babel/core": "^7.13.8",
     "@storybook/preset-scss": "^1.0.3",
     "@storybook/addon-actions": "^6.1.20",
-    "@storybook/addon-links": "^6.1.20",
+    "@storybook/addon-links": "^6.2.7",
     "@storybook/vue": "^6.1.20",
     "@vue/cli-plugin-babel": "^4.5.11",
     "@vue/cli-plugin-eslint": "^4.5.11",
