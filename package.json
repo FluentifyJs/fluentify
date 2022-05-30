@@ -26,7 +26,7 @@
     "@storybook/preset-scss": "^1.0.3",
     "@storybook/addon-actions": "^6.2.9",
     "@storybook/addon-links": "^6.1.20",
-    "@storybook/vue": "^6.2.9",
+    "@storybook/vue": "^6.5.6",
     "@vue/cli-plugin-babel": "^4.5.11",
     "@vue/cli-plugin-eslint": "^4.5.11",
     "@vue/cli-plugin-unit-mocha": "~4.5.11",
